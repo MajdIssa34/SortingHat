@@ -18,7 +18,7 @@ class _Quiz extends State<Quiz>{
 
   Widget? activeScreen;
   List<String> selectedAnswers = [];
-  List<String> keys = [];
+  //List<String> keys = [];
 
   @override
   void initState() {
@@ -55,9 +55,10 @@ class _Quiz extends State<Quiz>{
   @override
   Widget build(context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Container(
-          color: const Color(0xffF2D3AC),
+          color: Color.fromARGB(255, 255, 255, 255),
           child: activeScreen
           )
       ),
