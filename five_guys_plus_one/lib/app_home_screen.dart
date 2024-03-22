@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Image.asset(
-            'assets/images/HP_Quiz_Logo.jpg',
+            'assets\\images\\Macquarie_University Logo.png',
             width: 300,
           ),
           const SizedBox(height: 30),
