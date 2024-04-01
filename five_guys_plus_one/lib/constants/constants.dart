@@ -1,4 +1,3 @@
-
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/link.dart';
 import 'package:flutter/material.dart';
@@ -8,19 +7,15 @@ var appBarColor = const Color.fromARGB(255, 255, 255, 255);
 var myAppBar = AppBar(
   backgroundColor: Colors.white,
   title: Text('F I V E  G U Y S + 1',
-    style: GoogleFonts.bebasNeue(
-                  //textStyle: Theme.of(context).textTheme.displayLarge,
-                  fontSize: 35,
-                  fontWeight: FontWeight.w700,
-                  fontStyle: FontStyle.italic,
-                  color: Colors.black,
-  )),
+      style: GoogleFonts.bebasNeue(
+        fontSize: 35,
+        fontWeight: FontWeight.w700,
+        fontStyle: FontStyle.italic,
+        color: Colors.black,
+      )),
   centerTitle: true,
 );
-var drawerTextColor = TextStyle(
-  color: Colors.grey[600],
-);
-var tilePadding = const EdgeInsets.only(left: 8.0, right: 8, top: 8);
+var tilePadding = const EdgeInsets.all(20);
 var myDrawer = Drawer(
   backgroundColor: const Color.fromARGB(255, 255, 255, 255),
   elevation: 0,
@@ -37,14 +32,21 @@ var myDrawer = Drawer(
         child: ListTile(
           leading: const Icon(Icons.home),
           title: Text(
-            'M A J D  I S S A  G I T H U B',
-            style: drawerTextColor,
+            'F I V E  G U Y S + 1',
+            style: GoogleFonts.bebasNeue(
+              fontSize: 20,
+              fontWeight: FontWeight.w700,
+              fontStyle: FontStyle.italic,
+              color: Colors.black,
+            ),
+            textAlign: TextAlign.center,
           ),
         ),
       ),
+      const SizedBox(width: 30,),
       Link(
         target: LinkTarget.blank,
-        uri: Uri.parse("https://github.com/MajdIssa34/WeatherApp.git"),
+        uri: Uri.parse("https://coursehandbook.mq.edu.au/browse/By%20Faculty/FacultyofScienceandEngineering"),
         builder: (context, followLink) => ElevatedButton(
           onPressed: followLink,
           style: ElevatedButton.styleFrom(
@@ -53,36 +55,39 @@ var myDrawer = Drawer(
             shape: const StadiumBorder(),
             fixedSize: const Size(250, 50),
           ),
-          child: const Text(
-            "W  E  A  T  H  E  R    A  P  P  !",
-            style: TextStyle(
+          child: Text(
+            "M Q  C O U R S E  H A N D B O O K",
+            style: GoogleFonts.bebasNeue(
+              fontSize: 20,
+              fontWeight: FontWeight.w700,
+              fontStyle: FontStyle.italic,
               color: Colors.white,
-              fontWeight: FontWeight.bold,
-              fontSize: 12,
             ),
           ),
         ),
       ),
       const SizedBox(
-        height: 25,
+        height: 35,
       ),
-      ElevatedButton(
-        onPressed: (){},
-        style: ElevatedButton.styleFrom(
-          foregroundColor: Colors.black,
-          backgroundColor: const Color.fromARGB(255, 54, 54, 54),
-          shape: const StadiumBorder(),
-          fixedSize: const Size(250, 50),
-        ),
-        child: const Text(
-          "M A J D !",
-          style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              fontSize: 12,
-            )
+      Link(
+        target: LinkTarget.blank,
+        uri: Uri.parse("https://www.mq.edu.au/"),
+        builder: (context, followLink) => ElevatedButton(
+          onPressed: followLink,
+          style: ElevatedButton.styleFrom(
+            foregroundColor: Colors.black,
+            backgroundColor: const Color.fromARGB(255, 54, 54, 54),
+            shape: const StadiumBorder(),
+            fixedSize: const Size(250, 50),
           ),
+        child:  Text("M Q  W E B S I T E !",
+            style: GoogleFonts.bebasNeue(
+              fontSize: 20,
+              fontWeight: FontWeight.w700,
+              fontStyle: FontStyle.italic,
+              color: Colors.white,
+            )),
       ),
-    ],
+  )],
   ),
 );
