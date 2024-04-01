@@ -1,8 +1,9 @@
 import 'package:five_guys_plus_one/constants/constants.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 
-class TabletLayout extends StatelessWidget {
-  const TabletLayout(this.startQuiz, {super.key});
+class LaptopLayout extends StatelessWidget {
+  const LaptopLayout(this.startQuiz, {super.key});
 
   final void Function() startQuiz;
 
@@ -24,19 +25,20 @@ Widget build(BuildContext context) {
           mainAxisSize: MainAxisSize.min,
           children: [
             Image.asset(
-              alignment: Alignment.topLeft,
+              //alignment: Alignment.topLeft,
               'assets/images/Macquarie_University Logo.png',
-              width: 400,
+              width: 600,
             ),
             const SizedBox(height: 20),
-            const Center(
+            Center(
               child: Text(
                 '"Any sufficiently advanced technology is indistinguishable from magic"',
-                style: TextStyle(
+                style: GoogleFonts.bebasNeue(
+                  textStyle: Theme.of(context).textTheme.displayLarge,
+                  fontSize: 60,
+                  fontWeight: FontWeight.w700,
+                  fontStyle: FontStyle.italic,
                   color: Colors.white,
-                  fontSize: 28,
-                  fontWeight: FontWeight.normal,
-                  fontFamily: 'Times New Roman', // Add custom font
                 ),
                 textAlign: TextAlign.center, // Center the text
               ),
@@ -56,15 +58,18 @@ Widget build(BuildContext context) {
               child: TextButton(
                 onPressed: startQuiz,
                 style: TextButton.styleFrom(
-                  backgroundColor: Colors.white,
+                  backgroundColor: const Color.fromARGB(255, 48, 45, 45),
+                  padding: const EdgeInsets.all(25),
                 ),
-                child: const Text(
+                child: Text(
                   "Start the Quiz",
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w900,
-                    color: Colors.black,
-                  ),
+                  style: GoogleFonts.bebasNeue(
+                  textStyle: Theme.of(context).textTheme.displayLarge,
+                  fontSize: 30,
+                  fontWeight: FontWeight.w700,
+                  fontStyle: FontStyle.italic,
+                  color: Colors.white,
+                ),
                 ),
               ),
             ),

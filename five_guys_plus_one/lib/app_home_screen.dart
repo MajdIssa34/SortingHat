@@ -1,6 +1,6 @@
 import 'package:five_guys_plus_one/responsive_layout/mobile_layout.dart';
 import 'package:five_guys_plus_one/responsive_layout/responsive_layout.dart';
-import 'package:five_guys_plus_one/responsive_layout/tablet_layout.dart';
+import 'package:five_guys_plus_one/responsive_layout/laptop_layout.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -12,8 +12,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(context) {
     return ResponsiveLayout(
       mobileScaffold: MobileLayout(startQuiz), 
-      tabletScaffold: TabletLayout(startQuiz) , 
-      laptopScaffold: Text(""),
+      laptopScaffold: LaptopLayout(startQuiz),
     );   
   }
 }

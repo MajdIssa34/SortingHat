@@ -1,4 +1,5 @@
 
+import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/link.dart';
 import 'package:flutter/material.dart';
 
@@ -6,7 +7,14 @@ var defaultBackgroundColor = Color.fromARGB(255, 255, 255, 255);
 var appBarColor = const Color.fromARGB(255, 255, 255, 255);
 var myAppBar = AppBar(
   backgroundColor: Colors.white,
-  title: const Text('Team 41.'),
+  title: Text('F I V E  G U Y S + 1',
+    style: GoogleFonts.bebasNeue(
+                  //textStyle: Theme.of(context).textTheme.displayLarge,
+                  fontSize: 35,
+                  fontWeight: FontWeight.w700,
+                  fontStyle: FontStyle.italic,
+                  color: Colors.black,
+  )),
   centerTitle: true,
 );
 var drawerTextColor = TextStyle(
