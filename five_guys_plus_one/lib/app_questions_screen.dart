@@ -45,13 +45,6 @@ class _QuestionsScreen extends State<QuestionsScreen> {
               textAlign: TextAlign.center,
             ),
             const SizedBox(width: 30,),
-          // Column(
-          //   children: [
-          //     ElevatedButton(onPressed: (){} , child: Text(currentQuestion.answersList[0])),
-          //     const SizedBox(height: 16,), // Add space between buttons
-          //     ElevatedButton(onPressed: (){}, child: Text(currentQuestion.answersList[1])),
-          //   ],
-          // )
           ...currentQuestion.answersList.map((answer) {
             return AnswerButton(answerText: answer, onAnswerSelect: () {answerQuestion(answer);});
           }),

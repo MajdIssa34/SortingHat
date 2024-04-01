@@ -7,47 +7,70 @@ class TabletLayout extends StatelessWidget {
   final void Function() startQuiz;
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-  appBar: myAppBar,
-  //backgroundColor: defaultBackgroundColor,
-  drawer: myDrawer,
-  body: Center(
-    child: Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Image.asset(
-          'assets\\images\\Macquarie_University Logo.png',
-          width: 300,
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: myAppBar,
+    backgroundColor: Colors.transparent, // Set background color to transparent
+    drawer: myDrawer,
+    body: Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/images/background.jpg'), // Replace with your desired background image
+          fit: BoxFit.cover,
         ),
-        const SizedBox(height: 30),
-        const Text(
-          "Are you ready for the quiz?",
-          style: TextStyle(
-            color: Color.fromRGBO(214, 0, 28, 1.0),
-            fontSize: 22,
-          ),
-        ),
-        const SizedBox(height: 30),
-        OutlinedButton.icon(
-            icon: const Icon(Icons.arrow_right_alt_rounded),
-            style: OutlinedButton.styleFrom(
-              foregroundColor: const Color(0xff401201),
+      ),
+      child: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset(
+              alignment: Alignment.topLeft,
+              'assets/images/Macquarie_University Logo.png',
+              width: 400,
             ),
-            onPressed: startQuiz,
-            label: const Text(
-              "Start the Quiz",
-              style: TextStyle(
-                fontSize: 16,
+            const SizedBox(height: 20),
+            const Center(
+              child: Text(
+                '"Any sufficiently advanced technology is indistinguishable from magic"',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 28,
+                  fontWeight: FontWeight.normal,
+                  fontFamily: 'Times New Roman', // Add custom font
+                ),
+                textAlign: TextAlign.center, // Center the text
               ),
-            )),
-        Image.asset(
-          'assets\\images\\Six_Guys_Logo.png',
-          width: 300,
+            ),
+            const SizedBox(height: 20),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(-10),
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color.fromARGB(255, 255, 255, 255).withOpacity(0.1),
+                    spreadRadius: 1,
+                    blurRadius: 5,
+                  ),
+                ],
+              ),
+              child: TextButton(
+                onPressed: startQuiz,
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.white,
+                ),
+                child: const Text(
+                  "Start the Quiz",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w900,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
-      ],
+      ),
     ),
-  ),
-);
-  }
-}
+  );
+}}

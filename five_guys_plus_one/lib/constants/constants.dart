@@ -2,10 +2,10 @@
 import 'package:url_launcher/link.dart';
 import 'package:flutter/material.dart';
 
-var defaultBackgroundColor = const Color.fromARGB(255, 94, 94, 94);
+var defaultBackgroundColor = Color.fromARGB(255, 255, 255, 255);
 var appBarColor = const Color.fromARGB(255, 255, 255, 255);
 var myAppBar = AppBar(
-  backgroundColor: Colors.black45,
+  backgroundColor: Colors.white,
   title: const Text('Team 41.'),
   centerTitle: true,
 );
