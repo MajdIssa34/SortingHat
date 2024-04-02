@@ -29,8 +29,8 @@ class ResultsScreen extends StatelessWidget {
   }
   List<int> port(){
     //List<int> integers = [];
-    for(int i=0 ; i < 7 ; i++){
-      for(int j = 0 ; j < 2 ; j++){
+    for(int i=0 ; i < 3 ; i++){
+      for(int j = 0 ; j < 5 ; j++){
         if(questions[i].answersList[j] == collatedAnswers[i]){
           indices.add(j);
         }
@@ -42,7 +42,7 @@ class ResultsScreen extends StatelessWidget {
   List<String> getKeys(){
     List<int> myIndices = port();
     List<String> myKeys = [];
-    for(int i=0 ; i < 7; i++){
+    for(int i=0 ; i < 3; i++){
       myKeys.add(questions[i].keys[myIndices[i]]);
     }
     return myKeys;

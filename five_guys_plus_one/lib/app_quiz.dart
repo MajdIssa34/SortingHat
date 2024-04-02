@@ -36,7 +36,8 @@ class _Quiz extends State<Quiz>{
 
   void collectAnswers(String answer){
     selectedAnswers.add(answer);
-
+    // ignore: avoid_print
+    print(selectedAnswers.length);
     if(selectedAnswers.length == questions.length){
       setState(() {
         activeScreen = ResultsScreen(collatedAnswers: selectedAnswers,restartQuiz: restartQuiz,);

@@ -2,80 +2,55 @@ import 'package:five_guys_plus_one/models/question_model.dart';
 
 const questions = [
   QuizQuestion(
-    "Who is the GOAT",
+    "When you think about the future, which aspect of technology excites you the most?",
     [
-      'Messi',
-      'Ronaldo',
+      'Creating intelligent systems that can learn and adapt',
+      'Securing digital assets and preventing cyber threats',
+      'Extracting insights and patterns from large datasets',
+      'Developing efficient and user-friendly software solutions',
+      'Building innovative web and mobile applications',
     ],
     [
-      'B',
-      'R',
+      'AI',
+      'Cyber',
+      'DS',
+      'ST',
+      'WMAD',
+      
     ] 
     ),
   QuizQuestion(
-    "What tactic do you think is better?",
+    "How do you prefer to approach problem-solving?",
     [
-      'Possession',
-      'Counter-attacks',
+      'Analyzing data and drawing conclusions ',
+      'Crafting solutions that balance functionality and security',
+      'Designing intuitive user interfaces',
+      'Implementing algorithms and optimizing performance',
+      'Integrating various systems for seamless operation',
     ],
     [
-      'B',
-      'R',
+      'DS',
+      'Cyber',
+      'WMAD',
+      'AI',
+      'NW',
     ] 
     ),
     QuizQuestion(
-    "Better goal.",
+    "Which area of technology do you find most intriguing?",
     [
-      'Messi vs Athletic Bilbao',
-      'Ronaldo vs Juventus',
+      'Predictive analytics and machine learning ',
+      'Defending against cyber threats and attacks',
+      'Designing and managing information systems',
+      'Developing software applications for diverse purposes',
+      'Creating interactive and engaging digital experiences',
     ],
     [
-      'B',
-      'R',
-    ] 
-    ),
-    QuizQuestion(
-    "Best League of this century so far?",
-    [
-      'LaLiga',
-      'Premier League',
-    ],
-    [
-      'B',
-      'R',
-    ] 
-    ),
-    QuizQuestion(
-    "Best Attacking Trio?",
-    [
-      'MSN',
-      'BBC',
-    ],
-    [
-      'B',
-      'R',
-    ] 
-    ),
-  QuizQuestion(
-    "Would you like your team to focus on producing stars from their academy?",
-    [
-      'Yes',
-      'No',
-    ],
-    [
-      'B',
-      'R',
-    ] 
-    ),
-  QuizQuestion(
-    "Would you like your team to focus on investing in internaional stars ?",
-    [
-      'Yes',
-      'No',
-    ],
-    [
-      'R',
-      'B',
+      'AI',
+      'Cyber',
+      'ISBA',
+      'ST',
+      'GDD',
     ] 
     ),
 ];
