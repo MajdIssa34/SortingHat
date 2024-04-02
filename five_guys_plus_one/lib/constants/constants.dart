@@ -30,9 +30,9 @@ var myDrawer = Drawer(
       Padding(
         padding: tilePadding,
         child: ListTile(
-          leading: const Icon(Icons.home),
+          //leading: const Icon(Icons.home),
           title: Text(
-            'F I V E  G U Y S + 1',
+            '"Any sufficiently advanced technology is indistinguishable from magic."',
             style: GoogleFonts.bebasNeue(
               fontSize: 20,
               fontWeight: FontWeight.w700,

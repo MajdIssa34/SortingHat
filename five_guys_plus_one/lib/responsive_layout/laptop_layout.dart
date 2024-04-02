@@ -12,7 +12,7 @@ class LaptopLayout extends StatelessWidget {
     return Scaffold(
       appBar: myAppBar,
       backgroundColor:
-          Colors.transparent, // Set background color to transparent
+      Colors.transparent, // Set background color to transparent
       drawer: myDrawer,
       body: Container(
         decoration: const BoxDecoration(
@@ -35,13 +35,13 @@ class LaptopLayout extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(200, 40, 50, 20),
+                      padding: const EdgeInsets.fromLTRB(600, 40, 50, 20),
                       child: Column(children: [
                         Text(
-                          '"Any sufficiently advanced technology is indistinguishable from magic."',
+                          'This is what is going to happen, you will place the MAGIC BEANIE on your head, and it will ask you some questions. After answering all of the questions, it will suggest a major that suits you.',
                           style: GoogleFonts.bebasNeue(
                             textStyle: Theme.of(context).textTheme.displayLarge,
-                            fontSize: 80,
+                            fontSize: 40,
                             fontWeight: FontWeight.w700,
                             fontStyle: FontStyle.italic,
                             color: Colors.white,
