@@ -61,9 +61,57 @@ class StateModel extends ChangeNotifier{
     ] 
     ),
 ];
+  //list to store all answers
+  List<String> _answers = [];
 
+  //list to store all keys
+  List<String> _keys = [];
+
+
+  int currentQuestion = 0;
+  String _status = 'start';
+
+  // intitialising the quiz in the constructor
+  StateModel(){
+    resetQuiz();
+  }
   //get questions method
   UnmodifiableListView<QuizQuestion> get questions => UnmodifiableListView(_questions);
+
+  //get questions method
+  UnmodifiableListView<String> get answers => UnmodifiableListView(_answers);
+
+  //method to get the current question number
+  int get currentQuestionNumber => currentQuestion+1;
+
+  //get quiz status
+  String get quizStatus => _status;
+
+  //method to sart the quiz
+  void startQuiz(){
+    _status = 'in-progress';
+    notifyListeners();
+  }
+
+  //method to reset the quiz
+  void resetQuiz(){
+    currentQuestion = 0;
+    _status = 'start';
+    resetAnswers();
+    notifyListeners();
+  }
+
+  //method to advance to the next question
+  void advanceQuestion(){
+    if(++currentQuestion >= _questions.length){
+      _status = "complete";
+      currentQuestion--;
+      notifyListeners();
+    }
+  }
+
+  //method to get currentQuestion
+  QuizQuestion getCurrentQuestion() => _questions[currentQuestion];  
 
   //method to get a specific question
   QuizQuestion getSpecificQuestion(int i){
@@ -75,5 +123,16 @@ class StateModel extends ChangeNotifier{
     notifyListeners();
   }
 
-   
+  //method to add answers
+  void addAnswer(String answer, String key){
+    _answers[currentQuestion] = answer;
+    _keys[currentQuestion] = key;
+    notifyListeners();
+  }
+
+  //method to reset answers
+  void resetAnswers(){
+    _answers = List<String>.filled(_questions.length, "fill");
+    _keys = List<String>.filled(_questions.length, "");
+  } 
 }
