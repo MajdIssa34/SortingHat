@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:five_guys_plus_one/app_summary_section.dart';
+import 'package:five_guys_plus_one/screens/result_screens/app_summary_section.dart';
 import 'package:five_guys_plus_one/data/questions.dart';
 
 
@@ -9,6 +9,7 @@ class ResultsScreen extends StatelessWidget {
   final List<String> collatedAnswers;
   final void Function() restartQuiz;
   final List<int> indices = [];
+
   List<Map<String,Object>> getSummaryData(){
   List<Map<String,Object>> summaryData = [];
 
@@ -16,7 +17,6 @@ class ResultsScreen extends StatelessWidget {
       summaryData.add({
         'questionIndex': loopVariable,
         'question': questions[loopVariable].questionText,
-        //'correctAnswer': questions[loopVariable].answersList[0],
         'chosenAnswer':collatedAnswers[loopVariable],
         'keys': getKeys()[loopVariable],
       });
@@ -27,6 +27,7 @@ class ResultsScreen extends StatelessWidget {
   void add(){
     getSummaryData().add({'keys':getKeys()});
   }
+  
   List<int> port(){
     //List<int> integers = [];
     for(int i=0 ; i < 3 ; i++){

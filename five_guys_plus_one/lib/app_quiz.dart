@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:five_guys_plus_one/app_home_screen.dart';
-import 'package:five_guys_plus_one/app_questions_screen.dart';
-import 'package:five_guys_plus_one/app_results_screen.dart';
+import 'package:five_guys_plus_one/screens/home_screen/app_home_screen.dart';
+import 'package:five_guys_plus_one/screens/questions_screen/app_questions_screen.dart';
+import 'package:five_guys_plus_one/screens/result_screens/app_results_screen.dart';
 import 'package:five_guys_plus_one/data/questions.dart';
 
 class Quiz extends StatefulWidget{
