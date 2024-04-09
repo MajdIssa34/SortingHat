@@ -4,15 +4,13 @@ import 'package:five_guys_plus_one/responsive_layout/laptop_layout.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen(this.startQuiz, {super.key});
-
-  final void Function() startQuiz;
+  const HomeScreen({super.key});
 
   @override
   Widget build(context) {
-    return ResponsiveLayout(
-      mobileScaffold: MobileLayout(startQuiz), 
-      laptopScaffold: LaptopLayout(startQuiz),
-    );   
+    return const ResponsiveLayout(
+      mobileScaffold: MobileLayout(),
+      laptopScaffold: LaptopLayout(),
+    );
   }
 }

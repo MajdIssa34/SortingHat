@@ -7,7 +7,7 @@ void main() {
   runApp(
     ChangeNotifierProvider(
       create: (context) => StateModel(),
-      child: const Quiz(),
+      child: Quiz(),
     )
   );
 }

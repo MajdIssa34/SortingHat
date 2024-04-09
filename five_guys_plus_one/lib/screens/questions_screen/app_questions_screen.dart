@@ -1,34 +1,17 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:five_guys_plus_one/models/state.dart';
 import 'package:flutter/material.dart';
 import 'package:five_guys_plus_one/constants/app_answer_button.dart';
-import 'package:five_guys_plus_one/data/questions.dart';
 import 'package:provider/provider.dart';
 
-class QuestionsScreen extends StatefulWidget {
-  QuestionsScreen({super.key, required this.onSelectAnswer});
-
-  void Function(String answer) onSelectAnswer;
-  @override
-  State<QuestionsScreen> createState() {
-    return _QuestionsScreen();
-  }
-}
-
-class _QuestionsScreen extends State<QuestionsScreen> {
-  var currentQuestionIndex = 0;
-
-  void answerQuestion(String selectedAnswer) {
-    setState(() {
-      widget.onSelectAnswer(selectedAnswer);
-      currentQuestionIndex++;
-    });
-  }
+class QuestionsScreen extends StatelessWidget {
+  QuestionsScreen({super.key});
 
   @override
   Widget build(context) {
-
     return Consumer<StateModel>(builder: (context, value, child) {
-      var currentQuestion = value.getSpecificQuestion(currentQuestionIndex);
+      var currentQuestion = value.getCurrentQuestion();
       return SizedBox(
         width: double.infinity,
         child: Container(
@@ -55,7 +38,9 @@ class _QuestionsScreen extends State<QuestionsScreen> {
                   child: AnswerButton(
                       answerText: answer,
                       onAnswerSelect: () {
-                        answerQuestion(answer);
+                        //add answer and its corresponding key
+                        value.addAnswer(answer, value.getKeyForAnswer(answer));
+                        value.advanceQuestion();
                       }),
                 );
               }),

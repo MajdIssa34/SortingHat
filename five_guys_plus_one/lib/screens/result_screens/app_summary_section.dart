@@ -1,52 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:five_guys_plus_one/data/questions.dart';
 
 class SummarySection extends StatelessWidget {
-  SummarySection(this.displayData, {super.key});
+  const SummarySection(this.displayData, {super.key});
 
   final List<Map<String, Object>> displayData;
-  final List<int> indices = [];
+
   bool isCorrectAnswer(String userInput, String correctAnswer) {
     return userInput == correctAnswer ? true : false;
   }
-  List<int> port(){
-    //List<int> integers = [];
-    for(int i=0 ; i < 7 ; i++){
-      for(int j = 0 ; j < 2 ; j++){
-        if(questions[i].answersList[j] == displayData[i]['chosenAnswer']){
-          indices.add(j);
-        }
-      }
-    }
-    return indices; 
-  }
-
-  List<String> getKeys(){
-    List<int> myIndices = port();
-    List<String> myKeys = [];
-    for(int i=0 ; i < 7; i++){
-      myKeys.add(questions[i].keys[myIndices[i]]);
-    }
-    return myKeys;
-  }
-
-  // List<int> port(){
-  //   //List<int> integers = [];
-  //   for(int i=0 ; i < 7 ; i++){
-  //     for(int j = 0 ; j < 2 ; j++){
-  //       if(questions[i].answersList[j] == displayData[i]['chosenAnswer']){
-  //         indices.add(j);
-  //       }
-  //     }
-  //   }
-  //   return indices; 
-  // }
-
-  // List<String> keys(){
-  //   for(int i = 0 ; i < 7 ; i++){
-  //     questions[i].keys[]
-  //   }
-  // }
 
   @override
   Widget build(context) {
@@ -59,20 +20,9 @@ class SummarySection extends StatelessWidget {
               return Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                      height: 30,
-                      width: 30,
-                      alignment: Alignment.center,
-                      // decoration: BoxDecoration(
-                      //   color: isCorrectAnswer(data['chosenAnswer'] as String,
-                      //           data['correctAnswer'] as String)
-                      //       ? const Color.fromARGB(100, 0, 255, 0)
-                      //       : const Color.fromARGB(99, 255, 0, 0),
-                      //   borderRadius: BorderRadius.circular(100),
-                      // ),
-                      child: Text(
-                        ((data['questionIndex'] as int) + 1).toString(),
-                      )),
+                  Text(
+                    ((data['questionIndex'] as int) + 1).toString(),
+                  ),
                   const SizedBox(width: 20),
                   Expanded(
                     child: Column(
@@ -92,16 +42,15 @@ class SummarySection extends StatelessWidget {
                           ),
                           textAlign: TextAlign.center,
                         ),
-                        // Text(
-                        //   data['correctAnswer'] as String,
-                        //   style: const TextStyle(
-                        //     fontWeight: FontWeight.bold,
-                        //     color: Color(0xff2C4001),
-                        //   ),
-                        //   textAlign: TextAlign.center,
-                        // ),
+                        Text(
+                          data['chosenKeys'] as String,
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xff2C4001),
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
                         const SizedBox(height: 10),
-                        Text(data['keys'] as String),
                       ],
                     ),
                   )
