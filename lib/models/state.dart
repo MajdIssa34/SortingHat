@@ -50,6 +50,31 @@ class StateModel extends ChangeNotifier {
       'GDD',
     ]),
   ];
+  //map of all majors and their descriptions
+  Map<String, String> majorDescriptions = {
+    "Bachelor of Artificial Intelligence":
+        "This major focuses on the creation and management of intelligent systems capable of performing tasks that typically require human intelligence. Students learn about machine learning algorithms, neural networks, natural language processing, robotics, and the ethical considerations of AI.",
+    "Bachelor of Cybersecurity":
+        "In this major, students are trained to protect computer systems, networks, and data from cyber threats and attacks. The curriculum covers topics such as information security, network security, cryptography, ethical hacking, and digital forensics.",
+    "Bachelor of Data Science":
+        "This field of study is centered around extracting insights and knowledge from data. Students learn to apply statistical methods, machine learning algorithms, data mining techniques, and big data technologies to analyze, visualize, and interpret large datasets.",
+    "Bachelor of Software Technology":
+        "This major is focused on the development of software solutions. It covers a wide range of topics, including programming languages, software engineering principles, database management, system analysis and design, and the development of desktop, web, and mobile applications.",
+    "Bachelor of Web and Mobile Application Development":
+        "Students in this major learn to design and develop applications for the web and mobile devices. The curriculum includes web technologies, mobile app development frameworks, user interface and experience design, responsive design, and cross-platform development.",
+    "Bachelor of Network Engineering":
+        "This major prepares students to design, implement, and manage computer networks. Topics include network architecture, protocols, security, administration, and the integration of enterprise and cloud networks.",
+    "Bachelor of Information Systems and Business Analytics":
+        "This field combines information technology with business management. Students learn how to design and manage information systems and use analytics to solve business problems, improve decision-making, and gain strategic advantages.",
+    "Bachelor of Game Design and Development":
+        "Focused on the creation of digital games, this major covers the principles of game design, development processes, storytelling in games, programming for game engines, graphics and sound design, and the study of the gaming industry and culture."
+  };
+
+  //fuction to get a major's description
+  String getDescription(String major){
+    return majorDescriptions[major] ?? '';
+  } 
+
   //list to store all answers
   List<String> _answers = [];
 
@@ -129,29 +154,74 @@ class StateModel extends ChangeNotifier {
     _keys = List<String>.filled(_questions.length, "");
   }
 
-  //method to get summary data
-  List<Map<String, Object>> getSummaryData() {
-    List<Map<String, Object>> summaryData = [];
-
-    for (int i = 0; i < _answers.length; i++) {
-      summaryData.add({
-        'questionIndex': i,
-        'question': _questions[i].questionText,
-        'chosenAnswer': _answers[i],
-        'chosenKeys': _keys[i],
-      });
-    }
-    return summaryData;
-  }
-
   //method to get key for each answer
-  String getKeyForAnswer(String answer){
-    int keyIndex=0;
-    for(int i = 0 ; i < _questions[currentQuestion].answersList.length ;i++){
-      if(_questions[currentQuestion].answersList[i] == answer){
+  String getKeyForAnswer(String answer) {
+    int keyIndex = 0;
+    for (int i = 0; i < _questions[currentQuestion].answersList.length; i++) {
+      if (_questions[currentQuestion].answersList[i] == answer) {
         keyIndex = i;
       }
     }
     return _questions[currentQuestion].keys[keyIndex];
+  }
+
+  // Get final Recommended Major
+  String getRecommendedMajor() {
+    Map<String, int> keyOccurrences = {};
+
+    // Count occurrences of each key
+    for (String key in _keys) {
+      if (key.isNotEmpty) {
+        // Ensure the key is not an empty string
+        keyOccurrences[key] = (keyOccurrences[key] ?? 0) + 1;
+      }
+    }
+
+    if (keyOccurrences.isEmpty) {
+      return "No recommendations available";
+    }
+
+    // Find the highest occurrence without using math.max
+    int highestOccurrence =
+        keyOccurrences.values.reduce((a, b) => a > b ? a : b);
+
+    // Filter keys that have the highest occurrence
+    List<String> highestKeys = keyOccurrences.entries
+        .where((entry) => entry.value == highestOccurrence)
+        .map((entry) => entry.key)
+        .toList();
+
+    // If there's only one highest key, return its corresponding major
+    if (highestKeys.length == 1) {
+      return getMajorFromKey(highestKeys.first);
+    } else {
+      // If there are multiple keys with the highest occurrence, you can decide how to handle this.
+      // For example, return all corresponding majors joined by a comma:
+      return highestKeys.map((key) => getMajorFromKey(key)).join(", ");
+    }
+  }
+
+  //method to get major from keys
+  String getMajorFromKey(String key) {
+    switch (key) {
+      case 'AI':
+        return 'Bachelor of Artificial Intelligence';
+      case 'Cyber':
+        return 'Bachelor of Cybersecurity';
+      case 'DS':
+        return 'Bachelor of Data Science';
+      case 'ST':
+        return 'Bachelor of Software Technology';
+      case 'WMAD':
+        return 'Bachelor of Web and Mobile Application Development';
+      case 'NW':
+        return 'Bachelor of Network Engineering';
+      case 'ISBA':
+        return 'Bachelor of Information Systems and Business Analytics';
+      case 'GDD':
+        return 'Bachelor of Game Design and Development';
+      default:
+        return 'Unknown Major';
+    }
   }
 }
