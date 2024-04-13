@@ -13,8 +13,6 @@ class LaptopLayout extends StatelessWidget {
       builder: (context, value, child) {
         return Scaffold(
           appBar: myAppBar,
-          backgroundColor:
-              Colors.transparent, // Set background color to transparent
           drawer: myDrawer,
           body: Container(
             decoration: const BoxDecoration(
@@ -37,16 +35,14 @@ class LaptopLayout extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(600, 40, 50, 20),
+                          padding: const EdgeInsets.all(35),
                           child: Column(children: [
                             Text(
                               'This is what is going to happen, you will place the MAGIC BEANIE on your head, and it will ask you some questions. After answering all of the questions, it will suggest a major that suits you.',
-                              style: GoogleFonts.bebasNeue(
+                              style: GoogleFonts.poppins(
                                 textStyle:
                                     Theme.of(context).textTheme.displayLarge,
                                 fontSize: 40,
-                                fontWeight: FontWeight.w700,
-                                fontStyle: FontStyle.italic,
                                 color: Colors.white,
                               ),
                               textAlign: TextAlign.center, // Center the text
@@ -75,9 +71,8 @@ class LaptopLayout extends StatelessWidget {
                                 child: Text(
                                   "Start the Quiz",
                                   style: GoogleFonts.bebasNeue(
-                                    textStyle: Theme.of(context)
-                                        .textTheme
-                                        .displayLarge,
+                                    textStyle:
+                                        Theme.of(context).textTheme.displayLarge,
                                     fontSize: 30,
                                     fontWeight: FontWeight.w700,
                                     fontStyle: FontStyle.italic,
@@ -87,7 +82,7 @@ class LaptopLayout extends StatelessWidget {
                               ),
                             ),
                           ]),
-                        )
+                        ),
                       ],
                     ),
                   ),

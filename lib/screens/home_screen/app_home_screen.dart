@@ -1,6 +1,7 @@
 import 'package:five_guys_plus_one/responsive_layout/mobile_layout.dart';
 import 'package:five_guys_plus_one/responsive_layout/responsive_layout.dart';
 import 'package:five_guys_plus_one/responsive_layout/laptop_layout.dart';
+import 'package:five_guys_plus_one/responsive_layout/tablet_layout.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -11,6 +12,7 @@ class HomeScreen extends StatelessWidget {
     return const ResponsiveLayout(
       mobileScaffold: MobileLayout(),
       laptopScaffold: LaptopLayout(),
+      tabletScaffold: TabletLayout(),
     );
   }
 }

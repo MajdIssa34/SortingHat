@@ -30,17 +30,16 @@ class MobileLayout extends StatelessWidget {
                   Image.asset(
                     //alignment: Alignment.topLeft,
                     'assets/images/Macquarie_University Logo.png',
-                    width: 350,
+                    width: 450,
                   ),
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(40, 0, 40, 20),
+                    padding: const EdgeInsets.all(40),
                     child: Text(
                       'This is what is going to happen, you will place the MAGIC BEANIE on your head, and it will ask you some questions. After answering all of the questions, it will suggest a major that suits you.',
-                      style: GoogleFonts.bebasNeue(
+                      style: GoogleFonts.poppins(
                         textStyle: Theme.of(context).textTheme.displayLarge,
-                        fontSize: 30,
+                        fontSize: 20,
                         fontWeight: FontWeight.normal,
-                        fontStyle: FontStyle.italic,
                         color: Colors.white,
                       ),
                       textAlign: TextAlign.center, // Center the text

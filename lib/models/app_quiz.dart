@@ -10,8 +10,6 @@ class Quiz extends StatelessWidget{
 
   const Quiz({super.key});
   
-
-
   @override
   Widget build(context) {
     return MaterialApp(

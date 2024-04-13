@@ -1,0 +1,95 @@
+@startuml
+set namespaceSeparator ::
+
+class "five_guys_plus_one::constants::app_answer_button.dart::AnswerButton" {
+  +String answerText
+  +void Function() onAnswerSelect
+  +Widget build()
+}
+
+"five_guys_plus_one::constants::app_answer_button.dart::AnswerButton" o-- "null::void Function()"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "five_guys_plus_one::constants::app_answer_button.dart::AnswerButton"
+
+class "five_guys_plus_one::models::app_quiz.dart::Quiz" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "five_guys_plus_one::models::app_quiz.dart::Quiz"
+
+class "five_guys_plus_one::models::question_model.dart::QuizQuestion" {
+  +String questionText
+  +List<String> answersList
+  +List<String> keys
+}
+
+class "five_guys_plus_one::models::state.dart::StateModel" {
+  -List<QuizQuestion> _questions
+  +Map<String, String> majorDescriptions
+  -List<String> _answers
+  -List<String> _keys
+  +int currentQuestion
+  -String _status
+  +UnmodifiableListView<QuizQuestion> questions
+  +UnmodifiableListView<String> answers
+  +UnmodifiableListView<String> keys
+  +int currentQuestionNumber
+  +String quizStatus
+  +String getDescription()
+  +void startQuiz()
+  +void resetQuiz()
+  +void advanceQuestion()
+  +QuizQuestion getCurrentQuestion()
+  +QuizQuestion getSpecificQuestion()
+  +void add()
+  +void addAnswer()
+  +void resetAnswers()
+  +String getKeyForAnswer()
+  +String getRecommendedMajor()
+  +String getMajorFromKey()
+}
+
+"five_guys_plus_one::models::state.dart::StateModel" o-- "dart::collection::UnmodifiableListView<QuizQuestion>"
+"five_guys_plus_one::models::state.dart::StateModel" o-- "dart::collection::UnmodifiableListView<String>"
+"flutter::src::foundation::change_notifier.dart::ChangeNotifier" <|-- "five_guys_plus_one::models::state.dart::StateModel"
+
+class "five_guys_plus_one::responsive_layout::laptop_layout.dart::LaptopLayout" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "five_guys_plus_one::responsive_layout::laptop_layout.dart::LaptopLayout"
+
+class "five_guys_plus_one::responsive_layout::mobile_layout.dart::MobileLayout" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "five_guys_plus_one::responsive_layout::mobile_layout.dart::MobileLayout"
+
+class "five_guys_plus_one::responsive_layout::responsive_layout.dart::ResponsiveLayout" {
+  +Widget mobileScaffold
+  +Widget laptopScaffold
+  +Widget build()
+}
+
+"five_guys_plus_one::responsive_layout::responsive_layout.dart::ResponsiveLayout" o-- "flutter::src::widgets::framework.dart::Widget"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "five_guys_plus_one::responsive_layout::responsive_layout.dart::ResponsiveLayout"
+
+class "five_guys_plus_one::screens::home_screen::app_home_screen.dart::HomeScreen" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "five_guys_plus_one::screens::home_screen::app_home_screen.dart::HomeScreen"
+
+class "five_guys_plus_one::screens::questions_screen::app_questions_screen.dart::QuestionsScreen" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "five_guys_plus_one::screens::questions_screen::app_questions_screen.dart::QuestionsScreen"
+
+class "five_guys_plus_one::screens::result_screens::app_results_screen.dart::ResultsScreen" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "five_guys_plus_one::screens::result_screens::app_results_screen.dart::ResultsScreen"
+
+
+@enduml
