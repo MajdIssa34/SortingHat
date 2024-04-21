@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AnswerButton extends StatelessWidget{
   const AnswerButton({super.key, required this.answerText, required this.onAnswerSelect});
@@ -10,19 +11,24 @@ class AnswerButton extends StatelessWidget{
   Widget build(context) {
     return ElevatedButton(
             onPressed: onAnswerSelect, 
-            style: ElevatedButton.styleFrom(
+            style: ElevatedButton.styleFrom( 
               padding: const EdgeInsets.symmetric(
                 vertical: 10,
-                horizontal: 35,
+                horizontal: 10,
               ),
               foregroundColor: const Color(0xffF2D3AC),
-              backgroundColor: const Color(0xff401201),
+              backgroundColor: Colors.white.withOpacity(0.9),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(40)
               )
             ),
             child: Text(
-              answerText, 
+              answerText,
+              style: GoogleFonts.poppins(
+                fontSize: 20,
+                fontWeight: FontWeight.w600,
+                color: Colors.black
+              ), 
               textAlign: TextAlign.center,)
           );
   }
