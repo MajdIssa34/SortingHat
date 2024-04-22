@@ -1,5 +1,6 @@
 import 'package:five_guys_plus_one/constants/constants.dart';
 import 'package:five_guys_plus_one/models/state.dart';
+import 'package:five_guys_plus_one/screens/information_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -27,18 +28,13 @@ class MobileLayout extends StatelessWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Image.asset(
-                    //alignment: Alignment.topLeft,
-                    'assets/images/Macquarie_University Logo.png',
-                    width: 450,
-                  ),
                   Padding(
                     padding: const EdgeInsets.all(40),
                     child: Text(
-                      'This is what is going to happen, you will place the MAGIC BEANIE on your head, and it will ask you some questions. After answering all of the questions, it will suggest a major that suits you.',
-                      style: GoogleFonts.poppins(
+                      'MQ School of Computing Pathway Finder!',
+                      style: GoogleFonts.oswald(
                         textStyle: Theme.of(context).textTheme.displayLarge,
-                        fontSize: 20,
+                        fontSize: 50,
                         fontWeight: FontWeight.normal,
                         color: Colors.white,
                       ),
@@ -59,18 +55,24 @@ class MobileLayout extends StatelessWidget {
                       ],
                     ),
                     child: TextButton(
-                      onPressed: value.startQuiz,
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const IntermediateScreen()),
+                        );
+                      },
                       style: TextButton.styleFrom(
-                        backgroundColor: const Color.fromARGB(255, 48, 45, 45),
+                        backgroundColor: Colors.grey.withOpacity(0.9),
                         padding: const EdgeInsets.all(25),
                       ),
                       child: Text(
-                        "Start the Quiz",
+                        "Continue",
                         style: GoogleFonts.bebasNeue(
                           textStyle: Theme.of(context).textTheme.displayLarge,
                           fontSize: 30,
                           fontWeight: FontWeight.w700,
-                          fontStyle: FontStyle.italic,
+                          
                           color: Colors.white,
                         ),
                       ),

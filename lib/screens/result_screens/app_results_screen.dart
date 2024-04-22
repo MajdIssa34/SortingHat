@@ -33,7 +33,7 @@ class ResultsScreen extends StatelessWidget {
                             children: [
                               Text(
                                 "Your major is",
-                                style: GoogleFonts.poppins(
+                                style: GoogleFonts.oswald(
                                     fontSize: 20,
                                     fontWeight: FontWeight.w600,
                                     color: Colors.black),
@@ -43,14 +43,14 @@ class ResultsScreen extends StatelessWidget {
                                 height: 30,
                               ),
                               Text(value.getRecommendedMajor(),
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.oswald(
                                       fontSize: 30,
                                       fontWeight: FontWeight.w600,
                                       color: Colors.black),
                                   textAlign: TextAlign.center),
                               const SizedBox(height: 30),
                               Text(value.getDescription(value.getRecommendedMajor()),
-                                  style: GoogleFonts.poppins(
+                                  style: GoogleFonts.oswald(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w600,
                                       color: Colors.black),

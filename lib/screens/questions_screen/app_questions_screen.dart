@@ -54,11 +54,23 @@ class QuestionsScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Padding(
+                  padding: const EdgeInsets.all(5),
+                  child: Text(
+                    'Question ${state.currentQuestionNumber}:',
+                    style: GoogleFonts.oswald(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                Padding(
                   padding: const EdgeInsets.all(20),
                   child: Text(
                     currentQuestion.questionText,
-                    style: GoogleFonts.poppins(
-                      fontSize: 24,
+                    style: GoogleFonts.oswald(
+                      fontSize: 16,
                       fontWeight: FontWeight.w500,
                       color: Colors.black,
                     ),
@@ -120,12 +132,12 @@ class QuestionsScreen extends StatelessWidget {
               children: [
                 Expanded(
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center, // Center content vertically in the column
-                    crossAxisAlignment: CrossAxisAlignment.center, // Center content horizontally in the column
+                    mainAxisAlignment: MainAxisAlignment.center, 
+                    crossAxisAlignment: CrossAxisAlignment.center, 
                     children: [
                       Text(
                         'Question ${state.currentQuestionNumber}:',
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.oswald(
                           fontSize: 24,
                           fontWeight: FontWeight.w500,
                           color: Colors.black,
@@ -134,7 +146,7 @@ class QuestionsScreen extends StatelessWidget {
                       ),
                       Text(
                         currentQuestion.questionText,
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.oswald(
                           fontSize: 24,
                           fontWeight: FontWeight.w500,
                           color: Colors.black,
@@ -149,8 +161,8 @@ class QuestionsScreen extends StatelessWidget {
                 Expanded(
                   child: SingleChildScrollView(
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center, // Ensure vertical centering
-                      crossAxisAlignment: CrossAxisAlignment.center, // Ensure horizontal centering
+                      mainAxisAlignment: MainAxisAlignment.center, 
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisSize: MainAxisSize.min,
                       children: List.generate(
                           currentQuestion.answersList.length, (index) {

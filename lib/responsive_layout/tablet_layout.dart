@@ -34,61 +34,63 @@ class TabletLayout extends StatelessWidget {
                       width: 450,
                     ),
                     Expanded(
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(25),
-                            child: Column(
-                              children: [
-                              Text(
-                                'This is what is going to happen, you will place the MAGIC BEANIE on your head, and it will ask you some questions. After answering all of the questions, it will suggest a major that suits you.',
-                                style: GoogleFonts.poppins(
-                                  textStyle:
-                                      Theme.of(context).textTheme.displayLarge,
-                                  fontSize: 25,
-                                  color: Colors.white,
-                                ),
-                                textAlign: TextAlign.center, // Center the text
-                              ),
-                              const SizedBox(height: 20),
-                              Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(-10),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color:
-                                          const Color.fromARGB(255, 255, 255, 255)
-                                              .withOpacity(0.1),
-                                      spreadRadius: 1,
-                                      blurRadius: 5,
-                                    ),
-                                  ],
-                                ),
-                                child: TextButton(
-                                  onPressed: value.startQuiz,
-                                  style: TextButton.styleFrom(
-                                    backgroundColor:
-                                        const Color.fromARGB(255, 48, 45, 45),
-                                    padding: const EdgeInsets.all(25),
+                      child: SingleChildScrollView(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(25),
+                              child: Column(
+                                children: [
+                                Text(
+                                  'This is what is going to happen, you will place the MAGIC BEANIE on your head, and it will ask you some questions. After answering all of the questions, it will suggest a major that suits you.',
+                                  style: GoogleFonts.oswald(
+                                    textStyle:
+                                        Theme.of(context).textTheme.displayLarge,
+                                    fontSize: 25,
+                                    color: Colors.white,
                                   ),
-                                  child: Text(
-                                    "Start the Quiz",
-                                    style: GoogleFonts.bebasNeue(
-                                      textStyle: Theme.of(context)
-                                          .textTheme
-                                          .displayLarge,
-                                      fontSize: 30,
-                                      fontWeight: FontWeight.w700,
-                                      fontStyle: FontStyle.italic,
-                                      color: Colors.white,
+                                  textAlign: TextAlign.center, // Center the text
+                                ),
+                                const SizedBox(height: 20),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(-10),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color:
+                                            const Color.fromARGB(255, 255, 255, 255)
+                                                .withOpacity(0.1),
+                                        spreadRadius: 1,
+                                        blurRadius: 5,
+                                      ),
+                                    ],
+                                  ),
+                                  child: TextButton(
+                                    onPressed: value.startQuiz,
+                                    style: TextButton.styleFrom(
+                                      backgroundColor:
+                                          const Color.fromARGB(255, 48, 45, 45),
+                                      padding: const EdgeInsets.all(25),
+                                    ),
+                                    child: Text(
+                                      "Start the Quiz",
+                                      style: GoogleFonts.bebasNeue(
+                                        textStyle: Theme.of(context)
+                                            .textTheme
+                                            .displayLarge,
+                                        fontSize: 30,
+                                        fontWeight: FontWeight.w700,
+                                        fontStyle: FontStyle.italic,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ]),
-                          ),
-                        ],
+                              ]),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],

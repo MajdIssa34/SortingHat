@@ -24,8 +24,8 @@ class AnswerButton extends StatelessWidget{
             ),
             child: Text(
               answerText,
-              style: GoogleFonts.poppins(
-                fontSize: 20,
+              style: GoogleFonts.oswald(
+                fontSize: 16,
                 fontWeight: FontWeight.w600,
                 color: Colors.black
               ), 
