@@ -117,11 +117,14 @@ class StateModel extends ChangeNotifier {
       _keys[currentQuestion] =
           _questions[currentQuestion].keys[_selectedAnswerIndex ?? 0];
       _selectedAnswerIndex = null;
-      
+
       notifyListeners();
       advanceQuestion();
+      print(_keys);
     }
   }
+  //function to get process
+  double get progress => (currentQuestion) / _questions.length;
 
   //fuction to get a major's description
   String getDescription(String major) {
@@ -207,6 +210,17 @@ class StateModel extends ChangeNotifier {
   void resetAnswers() {
     _answers = List<String>.filled(_questions.length, "fill");
     _keys = List<String>.filled(_questions.length, "");
+  }
+
+  void goBack() {
+    if (currentQuestion > 0) {
+      currentQuestion--;
+      // Re-select the previously selected answer index when going back
+      _selectedAnswerIndex = _questions[currentQuestion]
+          .answersList
+          .indexOf(_answers[currentQuestion]);
+      notifyListeners();
+    }
   }
 
   //method to get key for each answer
