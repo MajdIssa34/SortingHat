@@ -1,3 +1,4 @@
+import 'package:five_guys_plus_one/constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -9,26 +10,28 @@ class QuestionsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
     return Consumer<StateModel>(
       builder: (context, state, child) {
         return Scaffold(
-            body: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(
-                  "assets/images/background.jpg"), // Use an appropriate image
-              fit: BoxFit.cover,
+          appBar: myAppBar,
+          drawer: myDrawer,
+          body: Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                    "assets/images/background.jpg"), // Use an appropriate image
+                fit: BoxFit.cover,
+              ),
+            ),
+            child: SafeArea(
+              child: Center(
+                child: MediaQuery.of(context).size.width < 800
+                    ? mobileTabletLayout(state)
+                    : desktopLayout(state),
+              ),
             ),
           ),
-          child: SafeArea(
-            child: Center(
-              child: screenWidth < 800
-                  ? mobileTabletLayout(state)
-                  : desktopLayout(state),
-            ),
-          ),
-        ));
+        );
       },
     );
   }
@@ -107,92 +110,88 @@ class QuestionsScreen extends StatelessWidget {
     ));
   }
 
- Widget desktopLayout(StateModel state) {
-  final currentQuestion = state.getCurrentQuestion();
-  return Center(
-    child: SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.all(40),
-        child: Container(
-          constraints: const BoxConstraints(minWidth: 1000, minHeight: 1000),
-          decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.7),
-            borderRadius: BorderRadius.circular(8.0),
-            border: Border.all(
-              color: Colors.white,
-              width: 2,
+  Widget desktopLayout(StateModel state) {
+    final currentQuestion = state.getCurrentQuestion();
+    return Center(
+      child: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(40),
+          child: Container(
+            constraints: const BoxConstraints(minWidth: 1000, minHeight: 1000),
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.7),
+              borderRadius: BorderRadius.circular(8.0),
+              border: Border.all(
+                color: Colors.white,
+                width: 2,
+              ),
             ),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(20),
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center, 
-                    crossAxisAlignment: CrossAxisAlignment.center, 
-                    children: [
-                      Text(
-                        'Question ${state.currentQuestionNumber}:',
-                        style: GoogleFonts.oswald(
-                          fontSize: 24,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.black,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      Text(
-                        currentQuestion.questionText,
-                        style: GoogleFonts.oswald(
-                          fontSize: 24,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.black,
-                        ),
-                        textAlign: TextAlign.center,
-                        softWrap: true,
-                        overflow: TextOverflow.visible,
-                      ),
-                    ],
-                  ),
-                ),
-                Expanded(
-                  child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(20),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Expanded(
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center, 
+                      mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.min,
-                      children: List.generate(
-                          currentQuestion.answersList.length, (index) {
-                        return Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 8.0),
-                          child: AnswerButton(
-                            answerText: currentQuestion.answersList[index],
-                            onAnswerSelect: () {
-                              state.addAnswer(
-                                currentQuestion.answersList[index],
-                                currentQuestion.keys[index],
-                              );
-                              state.advanceQuestion();
-                            },
+                      children: [
+                        Text(
+                          'Question ${state.currentQuestionNumber}:',
+                          style: GoogleFonts.oswald(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
                           ),
-                        );
-                      }),
+                          textAlign: TextAlign.center,
+                        ),
+                        Text(
+                          currentQuestion.questionText,
+                          style: GoogleFonts.oswald(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                          ),
+                          textAlign: TextAlign.center,
+                          softWrap: true,
+                          overflow: TextOverflow.visible,
+                        ),
+                      ],
                     ),
                   ),
-                ),
-              ],
+                  Expanded(
+                    child: SingleChildScrollView(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
+                        children: List.generate(
+                            currentQuestion.answersList.length, (index) {
+                          return Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 8.0),
+                            child: AnswerButton(
+                              answerText: currentQuestion.answersList[index],
+                              onAnswerSelect: () {
+                                state.addAnswer(
+                                  currentQuestion.answersList[index],
+                                  currentQuestion.keys[index],
+                                );
+                                state.advanceQuestion();
+                              },
+                            ),
+                          );
+                        }),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
-
-}
-
-
-

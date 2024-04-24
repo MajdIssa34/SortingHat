@@ -41,31 +41,45 @@ class IntermediateScreen extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(20),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Text(
-            'Get ready to explore your future major!',
-            style: GoogleFonts.oswald(
-                fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white),
-            textAlign: TextAlign.center,
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Text(
+              'Welcome to MQ School of Computing! THIS headset will guide you in selecting an MQ school of computing major/degree.',
+              style: GoogleFonts.oswald(
+                    fontSize: 35, fontWeight: FontWeight.bold, color: Colors.black),
+                textAlign: TextAlign.center,
+            ),
           ),
-          SizedBox(height: 210),
-          ElevatedButton(
-            onPressed: () {
-              // Start the quiz
-              Provider.of<StateModel>(context, listen: false).startQuiz();
-              // Navigate to the Quiz screen if necessary
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) =>
-                        Quiz()), // Ensure you have a Quiz widget or screen to navigate to
-              );
-            },
-            style: ElevatedButton.styleFrom(minimumSize: Size(200, 60)),
-            child:
-                Text('Start the Quiz', style: TextStyle(fontSize: 30 * 0.75)),
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: ElevatedButton(
+              onPressed: () {
+                // Start the quiz
+                Provider.of<StateModel>(context, listen: false).startQuiz();
+                // Navigate to the Quiz screen if necessary
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          Quiz()), // Ensure you have a Quiz widget or screen to navigate to
+                );
+              },
+              style: ElevatedButton.styleFrom(minimumSize: const Size(160, 40),
+                foregroundColor: const Color(0xffF2D3AC),
+                  backgroundColor: Colors.white.withOpacity(0.9),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(40)
+                  )),
+                child:
+                    Text('Find my Path', style: GoogleFonts.oswald(
+                    fontSize: 35,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black
+                  ), ),
+            ),
           ),
         ],
       ),
@@ -82,12 +96,12 @@ class IntermediateScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Welcome to MQ School of computing! THIS headset will guide you in selecting an MQ school of computing major/degree.',
+              'Welcome to MQ School of Computing! THIS headset will guide you in selecting an MQ school of computing major/degree.',
               style: GoogleFonts.oswald(
                   fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 400),
+            const SizedBox(height: 400),
             ElevatedButton(
               onPressed: () {
                 // Start the quiz
@@ -107,7 +121,7 @@ class IntermediateScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(40)
                 )),
               child:
-                  Text('Start the Quiz', style: GoogleFonts.oswald(
+                  Text('Find my Path', style: GoogleFonts.oswald(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
                   color: Colors.black
@@ -150,7 +164,7 @@ class IntermediateScreen extends StatelessWidget {
               );
             },
             style: ElevatedButton.styleFrom(minimumSize: buttonSize),
-            child: Text('Start the Quiz',
+            child: Text('Find my Path',
                 style: TextStyle(fontSize: fontSize * 0.75)),
           ),
         ],

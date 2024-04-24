@@ -67,7 +67,7 @@ class MobileLayout extends StatelessWidget {
                         padding: const EdgeInsets.all(25),
                       ),
                       child: Text(
-                        "Continue",
+                        "Start",
                         style: GoogleFonts.bebasNeue(
                           textStyle: Theme.of(context).textTheme.displayLarge,
                           fontSize: 30,

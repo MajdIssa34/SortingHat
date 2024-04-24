@@ -31,7 +31,7 @@ class LaptopLayout extends StatelessWidget {
                     Expanded(
                       flex: 2,  // Adjust flex as needed for better sizing
                       child: Padding(
-                        padding: const EdgeInsets.all(35),
+                        padding: const EdgeInsets.all(100),
                         child: Text(
                           'MQ School of Computing Pathway Finder!',
                           style: GoogleFonts.oswald(
@@ -65,9 +65,9 @@ class LaptopLayout extends StatelessWidget {
                               padding: const EdgeInsets.all(25),
                             ),
                             child: Text(
-                              "Continue",
+                              "Start",
                               style: GoogleFonts.bebasNeue(
-                                fontSize: 30,
+                                fontSize: 50,
                                 fontWeight: FontWeight.w700,
                                 fontStyle: FontStyle.italic,
                                 color: Colors.white,
