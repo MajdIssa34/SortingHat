@@ -4,6 +4,9 @@ import 'package:five_guys_plus_one/models/question_model.dart';
 import 'package:flutter/foundation.dart';
 
 class StateModel extends ChangeNotifier {
+  int? _selectedAnswerIndex;
+  int? get selectedAnswerIndex => _selectedAnswerIndex;
+
   //all of the questions
   final List<QuizQuestion> _questions = [
     const QuizQuestion(
@@ -100,10 +103,30 @@ class StateModel extends ChangeNotifier {
         "Focused on the creation of digital games, this major covers the principles of game design, development processes, storytelling in games, programming for game engines, graphics and sound design, and the study of the gaming industry and culture."
   };
 
+  //function to select answer
+  void selectAnswer(int index) {
+    _selectedAnswerIndex = index;
+    notifyListeners();
+  }
+
+  //function to confirm and advance
+  void confirmAndAdvanceQuestion() {
+    if (_selectedAnswerIndex != null) {
+      _answers[currentQuestion] =
+          _questions[currentQuestion].answersList[_selectedAnswerIndex ?? 0];
+      _keys[currentQuestion] =
+          _questions[currentQuestion].keys[_selectedAnswerIndex ?? 0];
+      _selectedAnswerIndex = null;
+      
+      notifyListeners();
+      advanceQuestion();
+    }
+  }
+
   //fuction to get a major's description
-  String getDescription(String major){
+  String getDescription(String major) {
     return majorDescriptions[major] ?? '';
-  } 
+  }
 
   //list to store all answers
   List<String> _answers = [];
@@ -144,7 +167,9 @@ class StateModel extends ChangeNotifier {
   void resetQuiz() {
     currentQuestion = 0;
     _status = 'start';
-    resetAnswers();
+    _selectedAnswerIndex = null;
+    _answers = List<String>.filled(_questions.length, "", growable: true);
+    _keys = List<String>.filled(_questions.length, "", growable: true);
     notifyListeners();
   }
 

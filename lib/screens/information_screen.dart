@@ -47,7 +47,7 @@ class IntermediateScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(20),
             child: Text(
-              'Welcome to MQ School of Computing! THIS headset will guide you in selecting an MQ school of computing major/degree.',
+              'Welcome to MQ School of Computing! THIS headset will guide you in selecting an MQ school of Computing Major/Degree.',
               style: GoogleFonts.oswald(
                     fontSize: 35, fontWeight: FontWeight.bold, color: Colors.black),
                 textAlign: TextAlign.center,
@@ -96,7 +96,7 @@ class IntermediateScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Welcome to MQ School of Computing! THIS headset will guide you in selecting an MQ school of computing major/degree.',
+              'Welcome to MQ School of Computing! THIS headset will guide you in selecting an MQ school of Computing Major/Degree.',
               style: GoogleFonts.oswald(
                   fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
               textAlign: TextAlign.center,

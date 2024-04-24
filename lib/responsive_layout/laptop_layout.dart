@@ -15,7 +15,7 @@ class LaptopLayout extends StatelessWidget {
         builder: (context, value, child) {
           return Scaffold(
             appBar: myAppBar,
-            drawer: myDrawer,
+            drawer: buildMyHomeDrawer(context),
             body: Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
