@@ -315,15 +315,11 @@ class StateModel extends ChangeNotifier {
         }
       }
     }
-    // print(ke.toString());
-    // print(answers.toString());
     return QuizQuestion(finalQuestion.questionText, answers, ke); 
   }
 
 // Process Tiebreaker Answer
   void selectTiebreakerAnswer(String major) {
-    //print(getKeyFromMajor(major));
-    //print(major);
     _keys.clear();
     
     _keys.add(getKeyForFinalAnswer(major));
