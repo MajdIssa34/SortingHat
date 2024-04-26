@@ -6,7 +6,27 @@ import 'package:flutter/foundation.dart';
 class StateModel extends ChangeNotifier {
   int? _selectedAnswerIndex;
   int? get selectedAnswerIndex => _selectedAnswerIndex;
-
+  final QuizQuestion finalQuestion = const QuizQuestion("Which of these team roles do you usually take?",
+        [
+          'The one who oversees the project\'s business impact',
+          'The one who handles all things security',
+          'The team\'s go-to for all things numbers ',
+          'The creative lead, focusing on the artistic and narrative aspects',
+          'The technical lead, focusing on implementing the project\'s core features ',
+          'The UI/UX designer, focusing on the project\'s interface and user interaction',
+          'The tech visionary, bringing in new ideas and innovations',
+          'The engineer, integrating different technologies to work together',
+        ],
+        [
+          'ISBA',
+          'Cyber',
+          'DS',
+          'GDD',
+          'ST',
+          'WMAD',
+          'AI',
+          'NW',
+        ]);
   //all of the questions
   final List<QuizQuestion> _questions = [
     const QuizQuestion(
@@ -27,10 +47,10 @@ class StateModel extends ChangeNotifier {
           'AI',
           'Cyber',
           'DS',
+          'GDD',
           'ST',
           'WMAD',
           'AI',
-          'Cyber',
           'DS',
           'ST',
           'WMAD',
@@ -123,6 +143,7 @@ class StateModel extends ChangeNotifier {
       print(_keys);
     }
   }
+
   //function to get process
   double get progress => (currentQuestion) / _questions.length;
 
@@ -234,40 +255,78 @@ class StateModel extends ChangeNotifier {
     return _questions[currentQuestion].keys[keyIndex];
   }
 
+  //method to get key for the final answer
+  String getKeyForFinalAnswer(String answer) {
+    int keyIndex = 0;
+    for (int i = 0; i < finalQuestion.answersList.length; i++) {
+      if (finalQuestion.answersList[i] == answer) {
+        keyIndex = i;
+      }
+    }
+    return finalQuestion.keys[keyIndex];
+  }
+
   // Get final Recommended Major
+  // Add a property to store tied majors
+  List<String> _tiedMajorsKeys = [];
+// Modify the method to detect ties
   String getRecommendedMajor() {
     Map<String, int> keyOccurrences = {};
-
-    // Count occurrences of each key
     for (String key in _keys) {
       if (key.isNotEmpty) {
-        // Ensure the key is not an empty string
         keyOccurrences[key] = (keyOccurrences[key] ?? 0) + 1;
       }
     }
-
     if (keyOccurrences.isEmpty) {
       return "No recommendations available";
     }
-
-    // Find the highest occurrence without using math.max
     int highestOccurrence =
         keyOccurrences.values.reduce((a, b) => a > b ? a : b);
-
-    // Filter keys that have the highest occurrence
     List<String> highestKeys = keyOccurrences.entries
         .where((entry) => entry.value == highestOccurrence)
         .map((entry) => entry.key)
         .toList();
 
-    // If there's only one highest key, return its corresponding major
     if (highestKeys.length == 1) {
+      _tiedMajorsKeys.clear(); // Clear any previously tied keys
       return getMajorFromKey(highestKeys.first);
     } else {
-      // If there are multiple keys with the highest occurrence, you can decide how to handle this.
-      // For example, return all corresponding majors joined by a comma:
-      return highestKeys.map((key) => getMajorFromKey(key)).join(", ");
+      _tiedMajorsKeys = highestKeys;
+      return "tie"; // Indicates a tie situation
     }
+  }
+
+// Get Tiebreaker Question
+  QuizQuestion getTiebreakerQuestion() {
+    List<String> majorChoices =
+        _tiedMajorsKeys.map((key) => getMajorFromKey(key)).toList();
+
+    return getAnswersBasedOnQuestions(majorChoices);
+  }
+  //get final question.
+  QuizQuestion getAnswersBasedOnQuestions(List<String> choices){
+    List<String> answers = [];
+    List<String> ke = [];
+    for(int i = 0 ; i< finalQuestion.keys.length ; i++){
+      for(int j = 0 ; j < choices.length ; j++){
+        if(getMajorFromKey(finalQuestion.keys[i]) == choices[j]){
+          answers.add(finalQuestion.answersList[i]);
+          ke.add(finalQuestion.keys[i]);
+        }
+      }
+    }
+    // print(ke.toString());
+    // print(answers.toString());
+    return QuizQuestion(finalQuestion.questionText, answers, ke); 
+  }
+
+// Process Tiebreaker Answer
+  void selectTiebreakerAnswer(String major) {
+    //print(getKeyFromMajor(major));
+    //print(major);
+    _keys.clear();
+    
+    _keys.add(getKeyForFinalAnswer(major));
   }
 
   //method to get major from keys
@@ -293,4 +352,19 @@ class StateModel extends ChangeNotifier {
         return 'Unknown Major';
     }
   }
+  String getKeyFromMajor(String major) {
+    Map<String, String> majorToKey = {
+      'Bachelor of Artificial Intelligence': 'AI',
+      'Bachelor of Cybersecurity': 'Cyber',
+      'Bachelor of Data Science': 'DS',
+      'Bachelor of Software Technology': 'ST',
+      'Bachelor of Web and Mobile Application Development': 'WMAD',
+      'Bachelor of Network Engineering': 'NW',
+      'Bachelor of Information Systems and Business Analytics': 'ISBA',
+      'Bachelor of Game Design and Development': 'GDD'
+    };
+
+    return majorToKey[major] ?? 'Unknown';  // Return 'Unknown' if the major isn't found
+}
+
 }

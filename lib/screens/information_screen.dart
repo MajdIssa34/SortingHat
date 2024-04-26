@@ -160,7 +160,7 @@ class IntermediateScreen extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                     builder: (context) =>
-                        Quiz()), // Ensure you have a Quiz widget or screen to navigate to
+                        const Quiz()), // Ensure you have a Quiz widget or screen to navigate to
               );
             },
             style: ElevatedButton.styleFrom(minimumSize: buttonSize),
