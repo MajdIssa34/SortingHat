@@ -3,7 +3,7 @@ import 'package:five_guys_plus_one/models/app_quiz.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:five_guys_plus_one/models/state.dart'; // Adjust the path according to your project structure
+import 'package:five_guys_plus_one/models/state.dart';
 
 class IntermediateScreen extends StatelessWidget {
   const IntermediateScreen({super.key});
@@ -64,7 +64,7 @@ class IntermediateScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) =>
-                          Quiz()), // Ensure you have a Quiz widget or screen to navigate to
+                          const Quiz()), // Ensure you have a Quiz widget or screen to navigate to
                 );
               },
               style: ElevatedButton.styleFrom(minimumSize: const Size(160, 40),
@@ -131,7 +131,6 @@ class IntermediateScreen extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 
   Widget commonLayout(BuildContext context,
@@ -150,7 +149,7 @@ class IntermediateScreen extends StatelessWidget {
                 color: Colors.white),
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
               // Start the quiz

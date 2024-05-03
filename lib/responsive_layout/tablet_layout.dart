@@ -16,7 +16,7 @@ class TabletLayout extends StatelessWidget {
           appBar: myAppBar,
           backgroundColor:
               Colors.transparent, // Set background color to transparent
-          drawer: buildMyHomeDrawer(context),
+          drawer: buildMyDrawer(context, 0),
           body: Container(
             decoration: const BoxDecoration(
               image: DecorationImage(

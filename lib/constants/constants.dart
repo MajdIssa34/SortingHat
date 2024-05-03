@@ -18,90 +18,8 @@ var myAppBar = AppBar(
   centerTitle: true,
 );
 var tilePadding = const EdgeInsets.all(20);
-Widget buildMyHomeDrawer(BuildContext context) {
-  return Drawer(
-    backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-    elevation: 0,
-    child: SingleChildScrollView(
-      child: Column(
-        children: [
-          const DrawerHeader(
-            child: Icon(
-              Icons.favorite,
-              size: 64,
-            ),
-          ),
-          Padding(
-            padding: tilePadding,
-            child: ListTile(
-              title: Text(
-                '"Any sufficiently advanced technology is indistinguishable from magic."',
-                style: GoogleFonts.oswald(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700,
-                  fontStyle: FontStyle.italic,
-                  color: Colors.black,
-                ),
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ),
-          const SizedBox(
-            width: 30,
-          ),
-          Link(
-            target: LinkTarget.blank,
-            uri: Uri.parse(
-                "https://coursehandbook.mq.edu.au/browse/By%20Faculty/FacultyofScienceandEngineering"),
-            builder: (context, followLink) => ElevatedButton(
-              onPressed: followLink,
-              style: ElevatedButton.styleFrom(
-                foregroundColor: Colors.black,
-                backgroundColor: const Color.fromARGB(255, 54, 54, 54),
-                shape: const StadiumBorder(),
-                fixedSize: const Size(250, 50),
-              ),
-              child: Text(
-                "M Q  C O U R S E  H A N D B O O K",
-                style: GoogleFonts.bebasNeue(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700,
-                  fontStyle: FontStyle.italic,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: 35,
-          ),
-          Link(
-            target: LinkTarget.blank,
-            uri: Uri.parse("https://www.mq.edu.au/"),
-            builder: (context, followLink) => ElevatedButton(
-              onPressed: followLink,
-              style: ElevatedButton.styleFrom(
-                foregroundColor: Colors.black,
-                backgroundColor: const Color.fromARGB(255, 54, 54, 54),
-                shape: const StadiumBorder(),
-                fixedSize: const Size(250, 50),
-              ),
-              child: Text("M Q  W E B S I T E !",
-                  style: GoogleFonts.bebasNeue(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w700,
-                    fontStyle: FontStyle.italic,
-                    color: Colors.white,
-                  )),
-            ),
-          ),
-        ],
-      ),
-    ),
-  );
-}
 
-Widget buildMyDrawer(BuildContext context) {
+Widget buildMyDrawer(BuildContext context, int index) {
   return Drawer(
     backgroundColor: const Color.fromARGB(255, 255, 255, 255),
     elevation: 0,
@@ -145,8 +63,9 @@ Widget buildMyDrawer(BuildContext context) {
                 fixedSize: const Size(250, 50),
               ),
               child: Text(
-                "M Q  C O U R S E  H A N D B O O K",
+                "MQ COURSE HANDBOOK",
                 style: GoogleFonts.bebasNeue(
+                  letterSpacing: 2,
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
                   fontStyle: FontStyle.italic,
@@ -169,9 +88,10 @@ Widget buildMyDrawer(BuildContext context) {
                 shape: const StadiumBorder(),
                 fixedSize: const Size(250, 50),
               ),
-              child: Text("M Q  W E B S I T E !",
+              child: Text("MQ WEBSITE",
                   style: GoogleFonts.bebasNeue(
                     fontSize: 20,
+                    letterSpacing: 2,
                     fontWeight: FontWeight.w700,
                     fontStyle: FontStyle.italic,
                     color: Colors.white,
@@ -183,9 +103,13 @@ Widget buildMyDrawer(BuildContext context) {
           ),
           ElevatedButton(
             onPressed: () {
-              if (ModalRoute.of(context)!.isCurrent) {
-                Navigator.of(context).pushReplacement(MaterialPageRoute(
-                    builder: (context) => const HomeScreen()));
+              if (index != 0) {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const HomeScreen()));
+              } else {
+                Navigator.pop(context);
               }
             },
             style: ElevatedButton.styleFrom(
@@ -196,6 +120,7 @@ Widget buildMyDrawer(BuildContext context) {
             ),
             child: Text("HOME",
                 style: GoogleFonts.bebasNeue(
+                  letterSpacing: 2,
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
                   fontStyle: FontStyle.italic,

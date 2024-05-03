@@ -20,7 +20,7 @@ class Quiz extends StatelessWidget{
           body: Container(
             color: const Color.fromARGB(255, 255, 255, 255),
             child: switch(value.quizStatus){
-              'in-progress' => QuestionsScreen(),
+              'in-progress' => const QuestionsScreen(),
               'complete' => const ResultsScreen(),
               _ => const HomeScreen(),
             }
