@@ -1,7 +1,7 @@
 import 'package:five_guys_plus_one/models/question_model.dart';
 import 'package:five_guys_plus_one/models/state.dart';
 import 'package:five_guys_plus_one/screens/questions_screen/questionnaire_widget.dart';
-import 'package:five_guys_plus_one/screens/result_screens/app_results_screen.dart';
+import 'package:five_guys_plus_one/screens/result_screens/final_screen_decider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -16,19 +16,21 @@ Widget desktopLayout(
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.all(60),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Final Question: ${currentQuestion.questionText}',
-                      style: GoogleFonts.oswald(
-                        fontSize: 55,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black,
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Final Question: ${currentQuestion.questionText}',
+                        style: GoogleFonts.oswald(
+                          fontSize: 55,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),

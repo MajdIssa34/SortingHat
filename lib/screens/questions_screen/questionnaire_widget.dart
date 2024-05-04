@@ -21,7 +21,7 @@ Widget styledQuestionContainer(Widget child, {required bool isDesktop}) {
       decoration: BoxDecoration(
         color: Colors.white.withOpacity(0.7),
         borderRadius: BorderRadius.circular(8.0),
-        border: Border.all(color: Colors.white, width: 2),
+        //border: Border.all(color: Colors.white, width: 2),
       ),
       child: child,
     ),

@@ -3,7 +3,7 @@ import 'package:five_guys_plus_one/models/state.dart';
 import 'package:flutter/material.dart';
 import 'package:five_guys_plus_one/screens/home_screen/app_home_screen.dart';
 import 'package:five_guys_plus_one/screens/questions_screen/app_questions_screen.dart';
-import 'package:five_guys_plus_one/screens/result_screens/app_results_screen.dart';
+import 'package:five_guys_plus_one/screens/result_screens/final_screen_decider.dart';
 import 'package:provider/provider.dart';
 
 class Quiz extends StatelessWidget{

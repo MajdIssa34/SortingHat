@@ -147,20 +147,22 @@ class QuestionsScreen extends StatelessWidget {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.all(60),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      buildProgressBar(state),
-                      Text(
-                        'Question ${state.currentQuestionNumber}: ${currentQuestion.questionText}',
-                        style: GoogleFonts.oswald(
-                          fontSize: 35,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.black,
+                  child: SingleChildScrollView(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        buildProgressBar(state),
+                        Text(
+                          'Question ${state.currentQuestionNumber}: ${currentQuestion.questionText}',
+                          style: GoogleFonts.oswald(
+                            fontSize: 35,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                          ),
+                          textAlign: TextAlign.center,
                         ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -198,54 +200,56 @@ class QuestionsScreen extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.all(50),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: ElevatedButton(
-                        onPressed: state.currentQuestionNumber > 1
-                            ? () {
-                                state.goBack();
-                              }
-                            : null,
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey.withOpacity(0.7),
-                          padding: const EdgeInsets.all(15),
-                        ),
-                        child: Text(
-                          'Back',
-                          style: GoogleFonts.oswald(
-                            fontSize: 25,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black,
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: ElevatedButton(
+                          onPressed: state.currentQuestionNumber > 1
+                              ? () {
+                                  state.goBack();
+                                }
+                              : null,
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.grey.withOpacity(0.7),
+                            padding: const EdgeInsets.all(15),
+                          ),
+                          child: Text(
+                            'Back',
+                            style: GoogleFonts.oswald(
+                              fontSize: 25,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: ElevatedButton(
-                        onPressed: state.selectedAnswerIndex != null
-                            ? () {
-                                state.confirmAndAdvanceQuestion();
-                              }
-                            : null,
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.grey.withOpacity(0.9),
-                          padding: const EdgeInsets.all(15),
-                        ),
-                        child: Text(
-                          'Next',
-                          style: GoogleFonts.oswald(
-                            fontSize: 25,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black,
+                      Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: ElevatedButton(
+                          onPressed: state.selectedAnswerIndex != null
+                              ? () {
+                                  state.confirmAndAdvanceQuestion();
+                                }
+                              : null,
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.grey.withOpacity(0.9),
+                            padding: const EdgeInsets.all(15),
+                          ),
+                          child: Text(
+                            'Next',
+                            style: GoogleFonts.oswald(
+                              fontSize: 25,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ],
