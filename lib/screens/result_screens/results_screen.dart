@@ -56,7 +56,7 @@ Widget mobileResultsScreen(
                 // Add your URL launching logic here
               },
               style: ElevatedButton.styleFrom(
-                fixedSize: const Size(250, 50),
+                fixedSize: const Size(250, 70),
                 backgroundColor: Colors.blueGrey,
                 padding: const EdgeInsets.all(15),
               ),
@@ -78,7 +78,7 @@ Widget mobileResultsScreen(
                 }
               },
               style: ElevatedButton.styleFrom(
-                fixedSize: const Size(250, 50),
+                fixedSize: const Size(250, 70),
                 backgroundColor: Colors.blueGrey,
                 padding: const EdgeInsets.all(15),
               ),
@@ -99,7 +99,7 @@ Widget mobileResultsScreen(
                 Navigator.of(context).popUntil((route) => route.isFirst);
               },
               style: ElevatedButton.styleFrom(
-                fixedSize: const Size(250, 50),
+                fixedSize: const Size(250, 70),
                 backgroundColor: Colors.blueGrey,
                 padding: const EdgeInsets.all(15),
               ),
@@ -167,7 +167,7 @@ Widget desktopResultsScreen(
         ),
         // Second column: all buttons
         Padding(
-          padding: const EdgeInsets.all(40),
+          padding: const EdgeInsets.all(25),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -179,7 +179,7 @@ Widget desktopResultsScreen(
                   // }
                 },
                 style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(250, 50),
+                  fixedSize: const Size(250, 70),
                   backgroundColor: Colors.blueGrey,
                   padding: const EdgeInsets.all(15),
                 ),
@@ -201,7 +201,7 @@ Widget desktopResultsScreen(
                   // }
                 },
                 style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(250, 50),
+                  fixedSize: const Size(250, 70),
                   backgroundColor: Colors.blueGrey,
                   padding: const EdgeInsets.all(15),
                 ),
@@ -222,7 +222,7 @@ Widget desktopResultsScreen(
                   Navigator.of(context).popUntil((route) => route.isFirst);
                 },
                 style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(250, 50),
+                  fixedSize: const Size(250, 70),
                   backgroundColor: Colors.blueGrey,
                   padding: const EdgeInsets.all(15),
                 ),
