@@ -1,0 +1,152 @@
+Date : 2024-05-09 16:14:10
+Directory : c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat
+Total : 66 files,  3442 codes, 404 comments, 437 blanks, all 4283 lines
+
+Languages
++-----------------+------------+------------+------------+------------+------------+
+| language        | files      | code       | comment    | blank      | total      |
++-----------------+------------+------------+------------+------------+------------+
+| Dart            |         19 |      1,856 |        117 |        125 |      2,098 |
+| C++             |         16 |        546 |        127 |        188 |        861 |
+| XML             |         10 |        469 |         53 |         12 |        534 |
+| JSON            |          4 |        248 |          0 |          4 |        252 |
+| Gradle          |          3 |         89 |          5 |         20 |        114 |
+| PlantUML        |          1 |         74 |          0 |         21 |         95 |
+| Swift           |          6 |         54 |          7 |         20 |         81 |
+| HTML            |          1 |         38 |         16 |          6 |         60 |
+| YAML            |          2 |         33 |         79 |         21 |        133 |
+| Markdown        |          2 |         27 |          0 |         18 |         45 |
+| Java Properties |          2 |          8 |          0 |          2 |         10 |
++-----------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                                            | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                               |         66 |      3,442 |        404 |        437 |      4,283 |
+| . (Files)                                                                                                                                       |          3 |         57 |         79 |         37 |        173 |
+| android                                                                                                                                         |         12 |        162 |         56 |         31 |        249 |
+| android (Files)                                                                                                                                 |          3 |         41 |          0 |          9 |         50 |
+| android\app                                                                                                                                     |          8 |        116 |         56 |         21 |        193 |
+| android\app (Files)                                                                                                                             |          1 |         51 |          5 |         12 |         68 |
+| android\app\src                                                                                                                                 |          7 |         65 |         51 |          9 |        125 |
+| android\app\src\debug                                                                                                                           |          1 |          3 |          4 |          1 |          8 |
+| android\app\src\main                                                                                                                            |          5 |         59 |         43 |          7 |        109 |
+| android\app\src\main (Files)                                                                                                                    |          1 |         33 |         11 |          1 |         45 |
+| android\app\src\main\res                                                                                                                        |          4 |         26 |         32 |          6 |         64 |
+| android\app\src\main\res\drawable                                                                                                               |          1 |          4 |          7 |          2 |         13 |
+| android\app\src\main\res\drawable-v21                                                                                                           |          1 |          4 |          7 |          2 |         13 |
+| android\app\src\main\res\values                                                                                                                 |          1 |          9 |          9 |          1 |         19 |
+| android\app\src\main\res\values-night                                                                                                           |          1 |          9 |          9 |          1 |         19 |
+| android\app\src\profile                                                                                                                         |          1 |          3 |          4 |          1 |          8 |
+| android\gradle                                                                                                                                  |          1 |          5 |          0 |          1 |          6 |
+| android\gradle\wrapper                                                                                                                          |          1 |          5 |          0 |          1 |          6 |
+| ios                                                                                                                                             |          8 |        229 |          4 |         13 |        246 |
+| ios\Runner                                                                                                                                      |          7 |        222 |          2 |          9 |        233 |
+| ios\Runner (Files)                                                                                                                              |          2 |         13 |          0 |          3 |         16 |
+| ios\RunnerTests                                                                                                                                 |          1 |          7 |          2 |          4 |         13 |
+| ios\Runner\Assets.xcassets                                                                                                                      |          3 |        148 |          0 |          4 |        152 |
+| ios\Runner\Assets.xcassets\AppIcon.appiconset                                                                                                   |          1 |        122 |          0 |          1 |        123 |
+| ios\Runner\Assets.xcassets\LaunchImage.imageset                                                                                                 |          2 |         26 |          0 |          3 |         29 |
+| ios\Runner\Base.lproj                                                                                                                           |          2 |         61 |          2 |          2 |         65 |
+| lib                                                                                                                                             |         18 |      1,843 |        106 |        118 |      2,067 |
+| lib (Files)                                                                                                                                     |          1 |         12 |          0 |          2 |         14 |
+| lib\constants                                                                                                                                   |          2 |        230 |          1 |         11 |        242 |
+| lib\models                                                                                                                                      |          3 |        334 |         32 |         43 |        409 |
+| lib\responsive_layout                                                                                                                           |          4 |        288 |          0 |         17 |        305 |
+| lib\screens                                                                                                                                     |          8 |        979 |         73 |         45 |      1,097 |
+| lib\screens (Files)                                                                                                                             |          1 |        157 |          8 |          9 |        174 |
+| lib\screens\credit_screen                                                                                                                       |          1 |         97 |          0 |          5 |        102 |
+| lib\screens\home_screen                                                                                                                         |          1 |         16 |          0 |          3 |         19 |
+| lib\screens\questions_screen                                                                                                                    |          2 |        253 |         46 |         13 |        312 |
+| lib\screens\result_screens                                                                                                                      |          3 |        456 |         19 |         15 |        490 |
+| linux                                                                                                                                           |          5 |        106 |         33 |         44 |        183 |
+| linux (Files)                                                                                                                                   |          3 |         94 |         24 |         33 |        151 |
+| linux\flutter                                                                                                                                   |          2 |         12 |          9 |         11 |         32 |
+| macos                                                                                                                                           |          6 |        446 |          5 |         16 |        467 |
+| macos\Flutter                                                                                                                                   |          1 |          8 |          3 |          4 |         15 |
+| macos\Runner                                                                                                                                    |          4 |        431 |          0 |          8 |        439 |
+| macos\Runner (Files)                                                                                                                            |          2 |         20 |          0 |          6 |         26 |
+| macos\RunnerTests                                                                                                                               |          1 |          7 |          2 |          4 |         13 |
+| macos\Runner\Assets.xcassets                                                                                                                    |          1 |         68 |          0 |          1 |         69 |
+| macos\Runner\Assets.xcassets\AppIcon.appiconset                                                                                                 |          1 |         68 |          0 |          1 |         69 |
+| macos\Runner\Base.lproj                                                                                                                         |          1 |        343 |          0 |          1 |        344 |
+| test                                                                                                                                            |          2 |         87 |         11 |         28 |        126 |
+| web                                                                                                                                             |          2 |         73 |         16 |          7 |         96 |
+| windows                                                                                                                                         |         10 |        439 |         94 |        143 |        676 |
+| windows\flutter                                                                                                                                 |          2 |         11 |          9 |         11 |         31 |
+| windows\runner                                                                                                                                  |          8 |        428 |         85 |        132 |        645 |
++-------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+
+| filename                                                                                                                                        | language        | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\README.md                                                     | Markdown        |         24 |          0 |         16 |         40 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\analysis_options.yaml                                         | YAML            |          3 |         22 |          4 |         29 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\android\app\build.gradle                                      | Gradle          |         51 |          5 |         12 |         68 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\android\app\src\debug\AndroidManifest.xml                     | XML             |          3 |          4 |          1 |          8 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\android\app\src\main\AndroidManifest.xml                      | XML             |         33 |         11 |          1 |         45 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\android\app\src\main\res\drawable-v21\launch_background.xml   | XML             |          4 |          7 |          2 |         13 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\android\app\src\main\res\drawable\launch_background.xml       | XML             |          4 |          7 |          2 |         13 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\android\app\src\main\res\values-night\styles.xml              | XML             |          9 |          9 |          1 |         19 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\android\app\src\main\res\values\styles.xml                    | XML             |          9 |          9 |          1 |         19 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\android\app\src\profile\AndroidManifest.xml                   | XML             |          3 |          4 |          1 |          8 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\android\build.gradle                                          | Gradle          |         16 |          0 |          3 |         19 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\android\gradle.properties                                     | Java Properties |          3 |          0 |          1 |          4 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\android\gradle\wrapper\gradle-wrapper.properties              | Java Properties |          5 |          0 |          1 |          6 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\android\settings.gradle                                       | Gradle          |         22 |          0 |          5 |         27 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\ios\RunnerTests\RunnerTests.swift                             | Swift           |          7 |          2 |          4 |         13 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\ios\Runner\AppDelegate.swift                                  | Swift           |         12 |          0 |          2 |         14 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\ios\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json   | JSON            |        122 |          0 |          1 |        123 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\ios\Runner\Assets.xcassets\LaunchImage.imageset\Contents.json | JSON            |         23 |          0 |          1 |         24 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\ios\Runner\Assets.xcassets\LaunchImage.imageset\README.md     | Markdown        |          3 |          0 |          2 |          5 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\ios\Runner\Base.lproj\LaunchScreen.storyboard                 | XML             |         36 |          1 |          1 |         38 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\ios\Runner\Base.lproj\Main.storyboard                         | XML             |         25 |          1 |          1 |         27 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\ios\Runner\Runner-Bridging-Header.h                           | C++             |          1 |          0 |          1 |          2 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\lib\constants\app_answer_button.dart                          | Dart            |         32 |          0 |          3 |         35 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\lib\constants\constants.dart                                  | Dart            |        198 |          1 |          8 |        207 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\lib\main.dart                                                 | Dart            |         12 |          0 |          2 |         14 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\lib\models\app_quiz.dart                                      | Dart            |         29 |          0 |          5 |         34 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\lib\models\question_model.dart                                | Dart            |          6 |          0 |          2 |          8 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\lib\models\state.dart                                         | Dart            |        299 |         32 |         36 |        367 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\lib\responsive_layout\laptop_layout.dart                      | Dart            |         86 |          0 |          5 |         91 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\lib\responsive_layout\mobile_layout.dart                      | Dart            |         86 |          0 |          4 |         90 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\lib\responsive_layout\responsive_layout.dart                  | Dart            |         26 |          0 |          4 |         30 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\lib\responsive_layout\tablet_layout.dart                      | Dart            |         90 |          0 |          4 |         94 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\lib\screens\credit_screen\app_credit_screen.dart              | Dart            |         97 |          0 |          5 |        102 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\lib\screens\home_screen\app_home_screen.dart                  | Dart            |         16 |          0 |          3 |         19 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\lib\screens\information_screen.dart                           | Dart            |        157 |          8 |          9 |        174 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\lib\screens\questions_screen\app_questions_screen.dart        | Dart            |        253 |          3 |          6 |        262 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\lib\screens\questions_screen\questionnaire_widget.dart        | Dart            |          0 |         43 |          7 |         50 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\lib\screens\result_screens\final_screen_decider.dart          | Dart            |         44 |          1 |          4 |         49 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\lib\screens\result_screens\results_screen.dart                | Dart            |        228 |         14 |          6 |        248 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\lib\screens\result_screens\tie_breaker_layout.dart            | Dart            |        184 |          4 |          5 |        193 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\linux\flutter\generated_plugin_registrant.cc                  | C++             |          7 |          4 |          5 |         16 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\linux\flutter\generated_plugin_registrant.h                   | C++             |          5 |          5 |          6 |         16 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\linux\main.cc                                                 | C++             |          5 |          0 |          2 |          7 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\linux\my_application.cc                                       | C++             |         82 |         17 |         26 |        125 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\linux\my_application.h                                        | C++             |          7 |          7 |          5 |         19 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\macos\Flutter\GeneratedPluginRegistrant.swift                 | Swift           |          8 |          3 |          4 |         15 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\macos\RunnerTests\RunnerTests.swift                           | Swift           |          7 |          2 |          4 |         13 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\macos\Runner\AppDelegate.swift                                | Swift           |          8 |          0 |          2 |         10 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\macos\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json | JSON            |         68 |          0 |          1 |         69 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\macos\Runner\Base.lproj\MainMenu.xib                          | XML             |        343 |          0 |          1 |        344 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\macos\Runner\MainFlutterWindow.swift                          | Swift           |         12 |          0 |          4 |         16 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\pubspec.yaml                                                  | YAML            |         30 |         57 |         17 |        104 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\test\test.puml                                                | PlantUML        |         74 |          0 |         21 |         95 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\test\widget_test.dart                                         | Dart            |         13 |         11 |          7 |         31 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\web\index.html                                                | HTML            |         38 |         16 |          6 |         60 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\web\manifest.json                                             | JSON            |         35 |          0 |          1 |         36 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\windows\flutter\generated_plugin_registrant.cc                | C++             |          6 |          4 |          5 |         15 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\windows\flutter\generated_plugin_registrant.h                 | C++             |          5 |          5 |          6 |         16 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\windows\runner\flutter_window.cpp                             | C++             |         49 |          7 |         16 |         72 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\windows\runner\flutter_window.h                               | C++             |         20 |          5 |          9 |         34 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\windows\runner\main.cpp                                       | C++             |         30 |          4 |         10 |         44 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\windows\runner\resource.h                                     | C++             |          9 |          6 |          2 |         17 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\windows\runner\utils.cpp                                      | C++             |         54 |          2 |         10 |         66 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\windows\runner\utils.h                                        | C++             |          8 |          6 |          6 |         20 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\windows\runner\win32_window.cpp                               | C++             |        210 |         24 |         55 |        289 |
+| c:\Users\issam\Desktop\Testing Space GitHub\Public\Sorting Hat Flutter\SortingHat\windows\runner\win32_window.h                                 | C++             |         48 |         31 |         24 |        103 |
+| Total                                                                                                                                           |                 |      3,442 |        404 |        437 |      4,283 |
++-------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+
