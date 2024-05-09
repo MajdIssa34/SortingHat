@@ -25,60 +25,62 @@ class MobileLayout extends StatelessWidget {
               ),
             ),
             child: Center(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(40),
-                    child: Text(
-                      'MQ School of Computing Pathway Finder!',
-                      style: GoogleFonts.oswald(
-                        textStyle: Theme.of(context).textTheme.displayLarge,
-                        fontSize: 50,
-                        fontWeight: FontWeight.normal,
-                        color: Colors.white,
-                      ),
-                      textAlign: TextAlign.center, // Center the text
-                    ),
-                  ),
-                  const SizedBox(height: 10),
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(-10),
-                      boxShadow: [
-                        BoxShadow(
-                          color: const Color.fromARGB(255, 255, 255, 255)
-                              .withOpacity(0.1),
-                          spreadRadius: 1,
-                          blurRadius: 5,
-                        ),
-                      ],
-                    ),
-                    child: TextButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const IntermediateScreen()),
-                        );
-                      },
-                      style: TextButton.styleFrom(
-                        backgroundColor: Colors.grey.withOpacity(0.9),
-                        padding: const EdgeInsets.all(25),
-                      ),
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(40),
                       child: Text(
-                        "Start",
-                        style: GoogleFonts.bebasNeue(
+                        'MQ School of Computing Pathway Finder!',
+                        style: GoogleFonts.poppins(
                           textStyle: Theme.of(context).textTheme.displayLarge,
-                          fontSize: 30,
-                          fontWeight: FontWeight.w700,
-                          
+                          fontSize: 50,
+                          fontWeight: FontWeight.normal,
                           color: Colors.white,
                         ),
+                        textAlign: TextAlign.center, // Center the text
                       ),
                     ),
-                  ),
-                ],
+                    const SizedBox(height: 10),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(-10),
+                        boxShadow: [
+                          BoxShadow(
+                            color: const Color.fromARGB(255, 255, 255, 255)
+                                .withOpacity(0.1),
+                            spreadRadius: 1,
+                            blurRadius: 5,
+                          ),
+                        ],
+                      ),
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const IntermediateScreen()),
+                          );
+                        },
+                        style: TextButton.styleFrom(
+                          backgroundColor: Colors.grey.withOpacity(0.9),
+                          padding: const EdgeInsets.all(25),
+                        ),
+                        child: Text(
+                          "Start",
+                          style: GoogleFonts.bebasNeue(
+                            textStyle: Theme.of(context).textTheme.displayLarge,
+                            fontSize: 30,
+                            fontWeight: FontWeight.w700,
+                            
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

@@ -1,5 +1,4 @@
 import 'package:five_guys_plus_one/models/question_model.dart';
-import 'package:five_guys_plus_one/screens/questions_screen/questionnaire_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -51,7 +50,7 @@ class QuestionsScreen extends StatelessWidget {
         buildProgressBar(state),
         Text(
           'Question ${state.currentQuestionNumber}: ${currentQuestion.questionText}',
-          style: GoogleFonts.oswald(fontSize: isDesktop ? 35 : 16, fontWeight: FontWeight.bold, color: Colors.black),
+          style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black),
           textAlign: TextAlign.center,
         ),
           Flexible(
@@ -65,7 +64,7 @@ class QuestionsScreen extends StatelessWidget {
                   return RadioListTile<int>(
                     title: Text(
                       currentQuestion.answersList[index],
-                      style: GoogleFonts.oswald(
+                      style: GoogleFonts.poppins(
                         fontSize: 12,
                         color: Colors.black,
                       ),
@@ -102,7 +101,7 @@ class QuestionsScreen extends StatelessWidget {
                     ),
                     child: Text(
                       'Back',
-                      style: GoogleFonts.oswald(
+                      style: GoogleFonts.poppins(
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                         color: Colors.black,
@@ -122,7 +121,7 @@ class QuestionsScreen extends StatelessWidget {
                   ),
                   child: Text(
                     'Next',
-                    style: GoogleFonts.oswald(
+                    style: GoogleFonts.poppins(
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
                       color: Colors.black,
@@ -155,7 +154,7 @@ class QuestionsScreen extends StatelessWidget {
                         buildProgressBar(state),
                         Text(
                           'Question ${state.currentQuestionNumber}: ${currentQuestion.questionText}',
-                          style: GoogleFonts.oswald(
+                          style: GoogleFonts.poppins(
                             fontSize: 35,
                             fontWeight: FontWeight.w500,
                             color: Colors.black,
@@ -179,7 +178,7 @@ class QuestionsScreen extends StatelessWidget {
                         return RadioListTile<int>(
                           title: Text(
                             currentQuestion.answersList[index],
-                            style: GoogleFonts.oswald(
+                            style: GoogleFonts.poppins(
                               fontSize: 25,
                               fontWeight: FontWeight.w500,
                               color: Colors.black,
@@ -219,7 +218,7 @@ class QuestionsScreen extends StatelessWidget {
                           ),
                           child: Text(
                             'Back',
-                            style: GoogleFonts.oswald(
+                            style: GoogleFonts.poppins(
                               fontSize: 25,
                               fontWeight: FontWeight.w500,
                               color: Colors.black,
@@ -241,7 +240,7 @@ class QuestionsScreen extends StatelessWidget {
                           ),
                           child: Text(
                             'Next',
-                            style: GoogleFonts.oswald(
+                            style: GoogleFonts.poppins(
                               fontSize: 25,
                               fontWeight: FontWeight.w500,
                               color: Colors.black,

@@ -1,7 +1,6 @@
 import 'package:five_guys_plus_one/constants/constants.dart';
 import 'package:five_guys_plus_one/models/question_model.dart';
 import 'package:five_guys_plus_one/models/state.dart';
-import 'package:five_guys_plus_one/screens/questions_screen/questionnaire_widget.dart';
 import 'package:five_guys_plus_one/screens/result_screens/final_screen_decider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -23,8 +22,8 @@ Widget desktopLayout(
                     children: [
                       Text(
                         'Final Question: ${currentQuestion.questionText}',
-                        style: GoogleFonts.oswald(
-                          fontSize: 55,
+                        style: GoogleFonts.poppins(
+                          fontSize: 35,
                           fontWeight: FontWeight.w500,
                           color: Colors.black,
                         ),
@@ -47,7 +46,7 @@ Widget desktopLayout(
                       return RadioListTile<int>(
                         title: Text(
                           currentQuestion.answersList[index],
-                          style: GoogleFonts.oswald(
+                          style: GoogleFonts.poppins(
                             fontSize: 25,
                             fontWeight: FontWeight.w500,
                             color: Colors.black,
@@ -90,7 +89,7 @@ Widget desktopLayout(
 
                   child: Text(
                     'Next',
-                    style: GoogleFonts.oswald(
+                    style: GoogleFonts.poppins(
                       fontSize: 25,
                       fontWeight: FontWeight.w500,
                       color: Colors.black,
@@ -117,8 +116,8 @@ Widget mobileTabletLayout(
                 padding: const EdgeInsets.all(20),
                 child: Text(
                   'Final Question: ${currentQuestion.questionText}',
-                  style: GoogleFonts.oswald(
-                      fontSize: isDesktop ? 60 : 35,
+                  style: GoogleFonts.poppins(
+                      fontSize: 16,
                       fontWeight: FontWeight.bold,
                       color: Colors.black),
                   textAlign: TextAlign.center,
@@ -137,8 +136,8 @@ Widget mobileTabletLayout(
                         child: RadioListTile<int>(
                           title: Text(
                             currentQuestion.answersList[index],
-                            style: GoogleFonts.oswald(
-                              fontSize: 22,
+                            style: GoogleFonts.poppins(
+                              fontSize: 12,
                               color: Colors.black,
                             ),
                             textAlign: TextAlign.center,
@@ -177,8 +176,8 @@ Widget mobileTabletLayout(
 
                   child: Text(
                     'Next',
-                    style: GoogleFonts.oswald(
-                      fontSize: 25,
+                    style: GoogleFonts.poppins(
+                      fontSize: 16,
                       fontWeight: FontWeight.w500,
                       color: Colors.black,
                     ),

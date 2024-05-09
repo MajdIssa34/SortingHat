@@ -27,10 +27,13 @@ Widget buildMyDrawer(BuildContext context, int index) {
     child: SingleChildScrollView(
       child: Column(
         children: [
-          const DrawerHeader(
-            child: Icon(
-              Icons.favorite,
-              size: 64,
+          DrawerHeader(
+            decoration:const BoxDecoration(
+              color:  Colors.white,
+            ),
+            child: Image.asset(
+              'assets/images/Macquarie_University Logo2.png',  // Ensure this path is correct
+              fit: BoxFit.contain,
             ),
           ),
           Padding(
@@ -38,7 +41,7 @@ Widget buildMyDrawer(BuildContext context, int index) {
             child: ListTile(
               title: Text(
                 '"Any sufficiently advanced technology is indistinguishable from magic."',
-                style: GoogleFonts.oswald(
+                style: GoogleFonts.poppins(
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
                   fontStyle: FontStyle.italic,
@@ -158,6 +161,7 @@ Widget buildMyDrawer(BuildContext context, int index) {
     ),
   );
 }
+
 Widget background(Widget child, String str) {
   return Container(
     decoration: BoxDecoration(
@@ -175,7 +179,7 @@ Widget styledQuestionContainer(Widget child, {required bool isDesktop}) {
     padding: EdgeInsets.all(isDesktop ? 40 : 20),
     child: Container(
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.7),
+        color: Colors.white.withOpacity(0.8),
         borderRadius: BorderRadius.circular(8.0),
         //border: Border.all(color: Colors.white, width: 2),
       ),
@@ -194,7 +198,7 @@ Widget styledElevatedButton(String text, VoidCallback? onPressed, {required bool
     ),
     child: Text(
       text,
-      style: GoogleFonts.oswald(
+      style: GoogleFonts.poppins(
         fontSize: isDesktop ? 25 : 16,
         fontWeight: FontWeight.w500,
         color: Colors.black,

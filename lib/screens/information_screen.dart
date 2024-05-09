@@ -48,7 +48,7 @@ class IntermediateScreen extends StatelessWidget {
             padding: const EdgeInsets.all(20),
             child: Text(
               'Welcome to MQ School of Computing! THIS headset will guide you in selecting an MQ school of Computing Major/Degree.',
-              style: GoogleFonts.oswald(
+              style: GoogleFonts.poppins(
                     fontSize: 35, fontWeight: FontWeight.bold, color: Colors.black),
                 textAlign: TextAlign.center,
             ),
@@ -74,7 +74,7 @@ class IntermediateScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(40)
                   )),
                 child:
-                    Text('Find my Path', style: GoogleFonts.oswald(
+                    Text('Find my Path', style: GoogleFonts.poppins(
                     fontSize: 35,
                     fontWeight: FontWeight.w600,
                     color: Colors.black
@@ -97,7 +97,7 @@ class IntermediateScreen extends StatelessWidget {
           children: <Widget>[
             Text(
               'Welcome to MQ School of Computing! THIS headset will guide you in selecting an MQ school of Computing Major/Degree.',
-              style: GoogleFonts.oswald(
+              style: GoogleFonts.poppins(
                   fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
               textAlign: TextAlign.center,
             ),
@@ -121,7 +121,7 @@ class IntermediateScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(40)
                 )),
               child:
-                  Text('Find my Path', style: GoogleFonts.oswald(
+                  Text('Find my Path', style: GoogleFonts.poppins(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
                   color: Colors.black
@@ -143,7 +143,7 @@ class IntermediateScreen extends StatelessWidget {
         children: <Widget>[
           Text(
             'Get ready to explore your future major!',
-            style: GoogleFonts.oswald(
+            style: GoogleFonts.poppins(
                 fontSize: fontSize,
                 fontWeight: FontWeight.bold,
                 color: Colors.white),
