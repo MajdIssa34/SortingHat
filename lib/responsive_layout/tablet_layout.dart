@@ -15,13 +15,13 @@ class TabletLayout extends StatelessWidget {
         return Scaffold(
           appBar: myAppBar,
           backgroundColor:
-              Colors.transparent, // Set background color to transparent
+              Colors.transparent,
           drawer: buildMyDrawer(context, 0),
           body: Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
-                    'assets/images/background3.jpg'), // Replace with your desired background image
+                    'assets/images/background3.jpg'),
                 fit: BoxFit.cover,
               ),
             ),

@@ -1,3 +1,4 @@
+import 'package:five_guys_plus_one/screens/credit_screen/app_credit_screen.dart';
 import 'package:five_guys_plus_one/screens/home_screen/app_home_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/link.dart';
@@ -126,9 +127,80 @@ Widget buildMyDrawer(BuildContext context, int index) {
                   fontStyle: FontStyle.italic,
                   color: Colors.white,
                 )),
+          ),
+          const SizedBox(
+            height: 35,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const CreditScreen()));
+            },
+            style: ElevatedButton.styleFrom(
+              foregroundColor: Colors.black,
+              backgroundColor: const Color.fromARGB(255, 54, 54, 54),
+              shape: const StadiumBorder(),
+              fixedSize: const Size(250, 50),
+            ),
+            child: Text("CREDITS",
+                style: GoogleFonts.bebasNeue(
+                  letterSpacing: 2,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
+                  fontStyle: FontStyle.italic,
+                  color: Colors.white,
+                )),
           )
         ],
       ),
     ),
   );
 }
+Widget background(Widget child, String str) {
+  return Container(
+    decoration: BoxDecoration(
+      image: DecorationImage(
+        image: AssetImage(str),
+        fit: BoxFit.cover,
+      ),
+    ),
+    child: SafeArea(child: child),
+  );
+}
+
+Widget styledQuestionContainer(Widget child, {required bool isDesktop}) {
+  return Padding(
+    padding: EdgeInsets.all(isDesktop ? 40 : 20),
+    child: Container(
+      decoration: BoxDecoration(
+        color: Colors.white.withOpacity(0.7),
+        borderRadius: BorderRadius.circular(8.0),
+        //border: Border.all(color: Colors.white, width: 2),
+      ),
+      child: child,
+    ),
+  );
+}
+
+
+Widget styledElevatedButton(String text, VoidCallback? onPressed, {required bool isDesktop}) {
+  return ElevatedButton(
+    onPressed: onPressed,
+    style: ElevatedButton.styleFrom(
+      backgroundColor: Colors.grey.withOpacity(0.7),
+      padding: EdgeInsets.all(isDesktop ? 25 : 15),
+    ),
+    child: Text(
+      text,
+      style: GoogleFonts.oswald(
+        fontSize: isDesktop ? 25 : 16,
+        fontWeight: FontWeight.w500,
+        color: Colors.black,
+      ),
+    ),
+  );
+}
+
+

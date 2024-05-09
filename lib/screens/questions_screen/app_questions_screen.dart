@@ -17,12 +17,13 @@ class QuestionsScreen extends StatelessWidget {
         return Scaffold(
           appBar: myAppBar,
           drawer: buildMyDrawer(context, 1),
-          body: questionnaireBackground(
+          body: background(
             Center(
               child: isDesktop
                   ? desktopLayout(state, isDesktop, state.getCurrentQuestion())
                   : mobileTabletLayout(state, isDesktop, state.getCurrentQuestion()),
             ),
+            "assets/images/background.jpg"
           ),
         );
       },
