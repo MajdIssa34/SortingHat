@@ -1,4 +1,4 @@
-import 'package:five_guys_plus_one/screens/credit_screen/app_credit_screen.dart';
+import 'package:five_guys_plus_one/screens/app_credit_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

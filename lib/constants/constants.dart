@@ -1,5 +1,5 @@
-import 'package:five_guys_plus_one/screens/credit_screen/app_credit_screen.dart';
-import 'package:five_guys_plus_one/screens/home_screen/app_home_screen.dart';
+import 'package:five_guys_plus_one/screens/app_credit_screen.dart';
+import 'package:five_guys_plus_one/screens/app_home_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/link.dart';
 import 'package:flutter/material.dart';

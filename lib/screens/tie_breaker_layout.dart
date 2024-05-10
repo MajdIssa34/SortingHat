@@ -1,7 +1,7 @@
 import 'package:five_guys_plus_one/constants/constants.dart';
 import 'package:five_guys_plus_one/models/question_model.dart';
 import 'package:five_guys_plus_one/models/state.dart';
-import 'package:five_guys_plus_one/screens/result_screens/final_screen_decider.dart';
+import 'package:five_guys_plus_one/screens/final_screen_decider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
