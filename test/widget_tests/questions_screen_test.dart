@@ -73,6 +73,6 @@ void main() {
 
       // Verify state has updated
       expect(state.selectedAnswerIndex, isNotNull);
-    });;
+    });
   });
 }

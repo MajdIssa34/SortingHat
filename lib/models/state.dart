@@ -25,7 +25,6 @@ class StateModel extends ChangeNotifier {
 
       notifyListeners();
       advanceQuestion();
-      print(_keys);
     }
   }
 
