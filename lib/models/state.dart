@@ -219,19 +219,19 @@ class StateModel extends ChangeNotifier {
   String getMajorFromKey(String key) {
     switch (key) {
       case 'AI':
-        return 'Bachelor of Artificial Intelligence';
-      case 'Cyber':
-        return 'Bachelor of Cybersecurity';
+        return 'Bachelor of IT majoring in Artificial Intelligence';
+      case 'CYB':
+        return 'Bachelor of IT majoring in Cybersecurity';
       case 'DS':
-        return 'Bachelor of Data Science';
+        return 'Bachelor of IT majoring in Data Science';
       case 'ST':
-        return 'Bachelor of Software Technology';
+        return 'Bachelor of IT majoring in Software Technology';
       case 'WMAD':
-        return 'Bachelor of Web and Mobile Application Development';
-      case 'NW':
-        return 'Bachelor of Network Engineering';
+        return 'Bachelor of IT majoring in Web and Mobile Application Development';
+      case 'NET':
+        return 'Bachelor of IT majoring in Network Engineering';
       case 'ISBA':
-        return 'Bachelor of Information Systems and Business Analytics';
+        return 'Bachelor of IT majoring in Information Systems and Business Analytics';
       case 'GDD':
         return 'Bachelor of Game Design and Development';
       default:
@@ -242,11 +242,11 @@ class StateModel extends ChangeNotifier {
   String getKeyFromMajor(String major) {
     Map<String, String> majorToKey = {
       'Bachelor of Artificial Intelligence': 'AI',
-      'Bachelor of Cybersecurity': 'Cyber',
+      'Bachelor of Cybersecurity': 'CYB',
       'Bachelor of Data Science': 'DS',
       'Bachelor of Software Technology': 'ST',
       'Bachelor of Web and Mobile Application Development': 'WMAD',
-      'Bachelor of Network Engineering': 'NW',
+      'Bachelor of Network Engineering': 'NET',
       'Bachelor of Information Systems and Business Analytics': 'ISBA',
       'Bachelor of Game Design and Development': 'GDD'
     };
@@ -259,19 +259,19 @@ class StateModel extends ChangeNotifier {
     String majorName = getRecommendedMajor();  // This method should return the full name of the major.
 
     switch (majorName) {
-        case 'Bachelor of Artificial Intelligence':
+        case 'Bachelor of IT majoring in Artificial Intelligence':
             return'https://www.mq.edu.au/study/find-a-course/courses/major/artificial-intelligence';
-        case 'Bachelor of Cybersecurity':
+        case 'Bachelor of IT majoring in Cybersecurity':
             return'https://www.example.com/cybersecurity';
-        case 'Bachelor of Data Science':
+        case 'Bachelor of IT majoring in Data Science':
             return'https://www.example.com/data-science';
-        case 'Bachelor of Software Technology':
+        case 'Bachelor of IT majoring in Software Technology':
             return'https://www.example.com/software-technology';
-        case 'Bachelor of Web and Mobile Application Development':
+        case 'Bachelor of IT majoring in Web and Mobile Application Development':
             return'https://www.example.com/web-mobile-app-development';
-        case 'Bachelor of Network Engineering':
+        case 'Bachelor of IT majoring in Network Engineering':
             return'https://www.example.com/network-engineering';
-        case 'Bachelor of Information Systems and Business Analytics':
+        case 'Bachelor of IT majoring in Information Systems and Business Analytics':
             return'https://www.example.com/information-systems-business-analytics';
         case 'Bachelor of Game Design and Development':
             return'https://www.example.com/game-design-development';

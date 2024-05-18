@@ -1,118 +1,241 @@
 import 'package:five_guys_plus_one/models/question_model.dart';
 
-const QuizQuestion finalQuestion = QuizQuestion("Which of these team roles do you usually take?",
-        [
-          'The one who oversees the project\'s business impact',
-          'The one who handles all things security',
-          'The team\'s go-to for all things numbers ',
-          'The creative lead, focusing on the artistic and narrative aspects',
-          'The technical lead, focusing on implementing the project\'s core features ',
-          'The UI/UX designer, focusing on the project\'s interface and user interaction',
-          'The tech visionary, bringing in new ideas and innovations',
-          'The engineer, integrating different technologies to work together',
-        ],
-        [
-          'ISBA',
-          'Cyber',
-          'DS',
-          'GDD',
-          'ST',
-          'WMAD',
-          'AI',
-          'NW',
-        ]);
-  //all of the questions
-  final List<QuizQuestion> questionnaireQuestions = [
-    const QuizQuestion(
-        "When you think about the future, which aspect of technology excites you the most?",
-        [
-          'Creating intelligent systems that can learn and adapt',
-          'Securing digital assets and preventing cyber threats',
-          'Extracting insights and patterns from large datasets',
-          'Developing efficient and user-friendly software solutions',
-          'Building innovative web and mobile applications',
-          'Creating intelligent systems that can learn and adapt',
-          'Securing digital assets and preventing cyber threats',
-          'Extracting insights and patterns from large datasets',
-          'Developing efficient and user-friendly software solutions',
-          'Building innovative web and mobile applications',
-        ],
-        [
-          'AI',
-          'Cyber',
-          'DS',
-          'GDD',
-          'ST',
-          'WMAD',
-          'AI',
-          'DS',
-          'ST',
-          'WMAD',
-        ]),
-    const QuizQuestion("How do you prefer to approach problem-solving?", [
-      'Analyzing data and drawing conclusions ',
-      'Crafting solutions that balance functionality and security',
-      'Designing intuitive user interfaces',
-      'Implementing algorithms and optimizing performance',
-      'Integrating various systems for seamless operation',
-      'Analyzing data and drawing conclusions ',
-      'Crafting solutions that balance functionality and security',
-      'Designing intuitive user interfaces',
-      'Implementing algorithms and optimizing performance',
-      'Integrating various systems for seamless operation',
-    ], [
-      'DS',
-      'Cyber',
-      'WMAD',
-      'AI',
-      'NW',
-      'DS',
-      'Cyber',
-      'WMAD',
-      'AI',
-      'NW',
-    ]),
-    const QuizQuestion(
-        "Which area of technology do you find most intriguing?", [
-      'Predictive analytics and machine learning ',
-      'Defending against cyber threats and attacks',
-      'Designing and managing information systems',
-      'Developing software applications for diverse purposes',
-      'Creating interactive and engaging digital experiences',
-      'Predictive analytics and machine learning ',
-      'Defending against cyber threats and attacks',
-      'Designing and managing information systems',
-      'Developing software applications for diverse purposes',
-      'Creating interactive and engaging digital experiences',
-    ], [
-      'AI',
-      'Cyber',
-      'ISBA',
-      'ST',
-      'GDD',
-      'AI',
-      'Cyber',
-      'ISBA',
-      'ST',
-      'GDD',
-    ]),
-  ];
-  //map of all majors and their descriptions
-  Map<String, String> majorDescriptions = {
-    "Bachelor of Artificial Intelligence":
-        "This major focuses on the creation and management of intelligent systems capable of performing tasks that typically require human intelligence. Students learn about machine learning algorithms, neural networks, natural language processing, robotics, and the ethical considerations of AI.",
-    "Bachelor of Cybersecurity":
-        "In this major, students are trained to protect computer systems, networks, and data from cyber threats and attacks. The curriculum covers topics such as information security, network security, cryptography, ethical hacking, and digital forensics.",
-    "Bachelor of Data Science":
-        "This field of study is centered around extracting insights and knowledge from data. Students learn to apply statistical methods, machine learning algorithms, data mining techniques, and big data technologies to analyze, visualize, and interpret large datasets.",
-    "Bachelor of Software Technology":
-        "This major is focused on the development of software solutions. It covers a wide range of topics, including programming languages, software engineering principles, database management, system analysis and design, and the development of desktop, web, and mobile applications.",
-    "Bachelor of Web and Mobile Application Development":
-        "Students in this major learn to design and develop applications for the web and mobile devices. The curriculum includes web technologies, mobile app development frameworks, user interface and experience design, responsive design, and cross-platform development.",
-    "Bachelor of Network Engineering":
-        "This major prepares students to design, implement, and manage computer networks. Topics include network architecture, protocols, security, administration, and the integration of enterprise and cloud networks.",
-    "Bachelor of Information Systems and Business Analytics":
-        "This field combines information technology with business management. Students learn how to design and manage information systems and use analytics to solve business problems, improve decision-making, and gain strategic advantages.",
-    "Bachelor of Game Design and Development":
-        "Focused on the creation of digital games, this major covers the principles of game design, development processes, storytelling in games, programming for game engines, graphics and sound design, and the study of the gaming industry and culture."
-  };
+const QuizQuestion finalQuestion =
+    QuizQuestion("The aspect of technology that intrigues you the most is:", [
+  'Artificial intelligence.',
+  'Digital forensics and crime prevention.',
+  'Predictive analytics.',
+  'Technological strategies in business.',
+  'Cloud services and infrastructure.',
+  'Software architecture.',
+  'Mobile technology advancements.',
+  'Virtual reality.',
+], [
+  'AI',
+  'CYB',
+  'DS',
+  'ISBA',
+  'NET',
+  'ST',
+  'WMAD',
+  'GDD',
+]);
+
+// All of the questions
+final List<QuizQuestion> questionnaireQuestions = [
+  const QuizQuestion(
+      "Which of these high school subjects/topics do you excel at or enjoy the most?",
+      [
+        'Business Studies.',
+        'Computer Science, specifically in security.',
+        'Math, especially advanced topics.',
+        'Art, particularly digital or multimedia art.',
+        'Programming or software design/tech.',
+        'Art or design technology, focusing on web layouts.',
+        'Science, especially physics or computer science.',
+        'Technology classes, especially those involving hardware.',
+      ],
+      [
+        'ISBA',
+        'CYB',
+        'DS',
+        'GDD',
+        'ST',
+        'WMAD',
+        'AI',
+        'NET',
+      ]),
+  const QuizQuestion("Which of these technologies excites you the most?", [
+    'Algorithms that predict user behavior.',
+    'Tools that visualize data.',
+    'Systems that enhance business processes.',
+    'Technologies that keep internet connections stable and fast.',
+    'Developing applications from scratch.',
+    'Creating interactive websites.',
+    'Solutions for data protection and intrusion prevention.',
+    'Designing levels for a video game.',
+  ], [
+    'AI',
+    'DS',
+    'ISBA',
+    'NET',
+    'ST',
+    'WMAD',
+    'CYB',
+    'GDD',
+  ]),
+  const QuizQuestion("What role do you see yourself playing in a tech team?", [
+    'The one who applies machine learning to solve problems.',
+    'The one who safeguards the team\'s digital resources.',
+    'The one who analyzes data to guide decisions.',
+    'The one who ensures technology aligns with business goals.',
+    'The one who handles network issues and connectivity.',
+    'The one who writes and tests code.',
+    'The one who designs user interfaces and experiences.',
+    'The one who creates the narrative and rules of the game.',
+  ], [
+    'AI',
+    'CYB',
+    'DS',
+    'ISBA',
+    'NET',
+    'ST',
+    'WMAD',
+    'GDD',
+  ]),
+  const QuizQuestion(
+      "When you hear about a new tech product, you're most interested in:", [
+    'Its learning capabilities.',
+    'Its security features.',
+    'The data it can process.',
+    'Its impact on business efficiency.',
+    'How it improves network performance.',
+    'Its programming languages and frameworks.',
+    'Its user interface and design.',
+    'The engagement mechanics it uses.',
+  ], [
+    'AI',
+    'CYB',
+    'DS',
+    'ISBA',
+    'NET',
+    'ST',
+    'WMAD',
+    'GDD',
+  ]),
+  const QuizQuestion("If you could automate any daily task, it would be:", [
+    'Scheduling and planning.',
+    'Organizing emails and files by importance.',
+    'Managing budgets and expenses.',
+    'Improving network performance.',
+    'Updating and maintaining personal software.',
+    'Personalizing your digital interfaces.',
+    'Securing personal devices automatically.',
+    'Creating digital artwork.',
+  ], [
+    'AI',
+    'DS',
+    'ISBA',
+    'NET',
+    'ST',
+    'WMAD',
+    'CYB',
+    'GDD',
+  ]),
+  const QuizQuestion("The tech job you dream of involves:", [
+    'Developing AI for robotics.',
+    'Leading a cybersecurity task force.',
+    'Managing big data projects for a tech giant.',
+    'Consulting on tech strategies for big companies.',
+    'Network administrator for a big company.',
+    'Being a lead software developer.',
+    'Directing a web development agency.',
+    'Designing a hit new video game.',
+  ], [
+    'AI',
+    'CYB',
+    'DS',
+    'ISBA',
+    'NET',
+    'ST',
+    'WMAD',
+    'GDD',
+  ]),
+  const QuizQuestion(
+      "What role would you like to take on group projects in University?", [
+    'The strategist.',
+    'The security.',
+    'The analyst.',
+    'The creative mind.',
+    'The coder.',
+    'The designer.',
+    'The innovator.',
+    'The connector.',
+  ], [
+    'ISBA',
+    'CYB',
+    'DS',
+    'GDD',
+    'ST',
+    'WMAD',
+    'AI',
+    'NET',
+  ]),
+  const QuizQuestion("What's your favorite type of game to play?", [
+    'Strategy games that involve business scenarios.',
+    'Puzzle games that require logical thinking and problem-solving.',
+    'Games involving complex statistics and scenario planning.',
+    'Role-playing games with rich storylines and worlds.',
+    'Games that involve building things.',
+    'Games that focus on design and creativity.',
+    'Games based on futuristic themes and technologies.',
+    'Multiplayer games that emphasise teamwork and networking skills.',
+  ], [
+    'ISBA',
+    'CYB',
+    'DS',
+    'GDD',
+    'ST',
+    'WMAD',
+    'AI',
+    'NET',
+  ]),
+  const QuizQuestion("If you could improve one technology, it would be:", [
+    'Personal AI assistants.',
+    'Anti-virus and anti-malware software.',
+    'Data analytics tools.',
+    'Point of sale systems - like your cashier at work.',
+    'Internet speed and reliability.',
+    'Software development platforms.',
+    'Web design tools.',
+    'Game engine capabilities.',
+  ], [
+    'AI',
+    'CYB',
+    'DS',
+    'ISBA',
+    'NET',
+    'ST',
+    'WMAD',
+    'GDD',
+  ]),
+  const QuizQuestion("When you think about your future, you imagine:", [
+    'Enhancing machine-human interactions.',
+    'Securing the digital world.',
+    'Turning data into actionable insights.',
+    'Integrating cutting-edge technology into businesses.',
+    'Connecting people no matter where they are.',
+    'Developing groundbreaking software.',
+    'Crafting engaging digital experiences.',
+    'Creating the next generation of interactive entertainment.',
+  ], [
+    'AI',
+    'CYB',
+    'DS',
+    'ISBA',
+    'NET',
+    'ST',
+    'WMAD',
+    'GDD',
+  ]),
+];
+
+// Map of all majors and their descriptions
+Map<String, String> majorDescriptions = {
+  "Bachelor of IT majoring in Artificial Intelligence":
+      "This major focuses on the creation and management of intelligent systems capable of performing tasks that typically require human intelligence. Students learn about machine learning algorithms, neural networks, natural language processing, robotics, and the ethical considerations of AI.",
+  "Bachelor of IT majoring in Cybersecurity":
+      "In this major, students are trained to protect computer systems, networks, and data from cyber threats and attacks. The curriculum covers topics such as information security, network security, cryptography, ethical hacking, and digital forensics.",
+  "Bachelor of IT majoring in Data Science":
+      "This field of study is centered around extracting insights and knowledge from data. Students learn to apply statistical methods, machine learning algorithms, data mining techniques, and big data technologies to analyze, visualize, and interpret large datasets.",
+  "Bachelor of IT majoring in Software Technology":
+      "This major is focused on the development of software solutions. It covers a wide range of topics, including programming languages, software engineering principles, database management, system analysis and design, and the development of desktop, web, and mobile applications.",
+  "Bachelor of IT majoring in Web and Mobile Application Development":
+      "Students in this major learn to design and develop applications for the web and mobile devices. The curriculum includes web technologies, mobile app development frameworks, user interface and experience design, responsive design, and cross-platform development.",
+  "Bachelor of IT majoring in Networking":
+      "This major prepares students to design, implement, and manage computer networks. Topics include network architecture, protocols, security, administration, and the integration of enterprise and cloud networks.",
+  "Bachelor of IT majoring in Information Systems and Business Analytics":
+      "This field combines information technology with business management. Students learn how to design and manage information systems and use analytics to solve business problems, improve decision-making, and gain strategic advantages.",
+  "Bachelor of Game Design and Development":
+      "Focused on the creation of digital games, this major covers the principles of game design, development processes, storytelling in games, programming for game engines, graphics and sound design, and the study of the gaming industry and culture."
+};
