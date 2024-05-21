@@ -69,7 +69,7 @@ Widget mobileResultsScreen(
                       padding: const EdgeInsets.all(15),
                     ),
                     child: Text(
-                      "Open Major Handbook",
+                      "Learn More About this Major",
                       style: GoogleFonts.poppins(
                         fontSize: 20,
                         fontWeight: FontWeight.w500,
@@ -193,7 +193,7 @@ Widget desktopResultsScreen(
                   padding: const EdgeInsets.all(15),
                 ),
                 child: Text(
-                  "Open Major Handbook",
+                  "Learn More About this Major",
                   style: GoogleFonts.poppins(
                     fontSize: 20,
                     fontWeight: FontWeight.w500,

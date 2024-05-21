@@ -54,7 +54,7 @@ class CreditScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         boldText('Team Leader/Scrum Master:',24),
-                        normalText("Elias Hawly",24),
+                        normalText("Elias Swaiy",24),
                         normalText('Organizing scrums and sprints, overall team coordination.',24),
                       ],
                     ),
@@ -103,7 +103,7 @@ class CreditScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             boldText('Product Owner:',24),
-                            normalText('MQ Outreach',24),
+                            normalText('MQ Outreach and Engagement',24),
                             normalText(' Represents the stakeholders, guiding the project\'s objectives and deliverables.',24),
                           ],
                         ),
@@ -172,7 +172,7 @@ class CreditScreen extends StatelessWidget {
                   height: 10,
                 ),
                 boldText('Team Leader/Scrum Master:',16),
-                normalText("Elias Hawly",16),
+                normalText("Elias Swaiy",16),
                 const SizedBox(
                   height: 10,
                 ),
@@ -192,7 +192,7 @@ class CreditScreen extends StatelessWidget {
                   height: 10,
                 ),
                 boldText('Product Owner:',16),
-                normalText('MQ Outreach',16),
+                normalText('MQ Outreach and Engagement',16),
                 const SizedBox(
                   height: 30,
                 ),
