@@ -240,13 +240,13 @@ class StateModel extends ChangeNotifier {
 
   String getKeyFromMajor(String major) {
     Map<String, String> majorToKey = {
-      'Bachelor of Artificial Intelligence': 'AI',
-      'Bachelor of Cybersecurity': 'CYB',
-      'Bachelor of Data Science': 'DS',
-      'Bachelor of Software Technology': 'ST',
-      'Bachelor of Web and Mobile Application Development': 'WMAD',
-      'Bachelor of Network Engineering': 'NET',
-      'Bachelor of Information Systems and Business Analytics': 'ISBA',
+      'Bachelor of IT majoring in Artificial Intelligence': 'AI',
+      'Bachelor of IT majoring in Cybersecurity': 'CYB',
+      'Bachelor of IT majoring in Data Science': 'DS',
+      'Bachelor of IT majoring in Software Technology': 'ST',
+      'Bachelor of IT majoring in Web and Mobile Application Development': 'WMAD',
+      'Bachelor of IT majoring in Network Engineering': 'NET',
+      'Bachelor of IT majoring in Information Systems and Business Analytics': 'ISBA',
       'Bachelor of Game Design and Development': 'GDD'
     };
 
@@ -261,21 +261,21 @@ class StateModel extends ChangeNotifier {
         case 'Bachelor of IT majoring in Artificial Intelligence':
             return'https://www.mq.edu.au/study/find-a-course/courses/major/artificial-intelligence';
         case 'Bachelor of IT majoring in Cybersecurity':
-            return'https://www.example.com/cybersecurity';
+            return'https://www.mq.edu.au/study/find-a-course/courses/major/cyber-security';
         case 'Bachelor of IT majoring in Data Science':
-            return'https://www.example.com/data-science';
+            return'https://www.mq.edu.au/study/find-a-course/courses/major/data-science';
         case 'Bachelor of IT majoring in Software Technology':
-            return'https://www.example.com/software-technology';
+            return'https://www.mq.edu.au/study/find-a-course/courses/major/software-technology';
         case 'Bachelor of IT majoring in Web and Mobile Application Development':
-            return'https://www.example.com/web-mobile-app-development';
+            return'https://www.mq.edu.au/study/find-a-course/courses/major/web-and-mobile-app-development';
         case 'Bachelor of IT majoring in Network Engineering':
-            return'https://www.example.com/network-engineering';
+            return'https://www.mq.edu.au/study/find-a-course/courses/major/networking';
         case 'Bachelor of IT majoring in Information Systems and Business Analytics':
-            return'https://www.example.com/information-systems-business-analytics';
+            return'https://www.mq.edu.au/study/find-a-course/courses/major/information-systems-and-business-analysis';
         case 'Bachelor of Game Design and Development':
-            return'https://www.example.com/game-design-development';
+            return'https://www.mq.edu.au/study/find-a-course/courses/bachelor-of-game-design-and-development';
         default:
-            return'https://www.example.com';  // Default or unknown major link
+            return'https://www.mq.edu.au/study/find-a-course';  // Default or unknown major link
     }
 }
 
