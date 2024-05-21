@@ -232,7 +232,7 @@ Map<String, String> majorDescriptions = {
       "This major is focused on the development of software solutions. It covers a wide range of topics, including programming languages, software engineering principles, database management, system analysis and design, and the development of desktop, web, and mobile applications.",
   "Bachelor of IT majoring in Web and Mobile Application Development":
       "Students in this major learn to design and develop applications for the web and mobile devices. The curriculum includes web technologies, mobile app development frameworks, user interface and experience design, responsive design, and cross-platform development.",
-  "Bachelor of IT majoring in Networking":
+  "Bachelor of IT majoring in Network Engineering":
       "This major prepares students to design, implement, and manage computer networks. Topics include network architecture, protocols, security, administration, and the integration of enterprise and cloud networks.",
   "Bachelor of IT majoring in Information Systems and Business Analytics":
       "This field combines information technology with business management. Students learn how to design and manage information systems and use analytics to solve business problems, improve decision-making, and gain strategic advantages.",
