@@ -36,7 +36,7 @@ class LaptopLayout extends StatelessWidget {
                           child: Text(
                             'MQ School of Computing Pathway Finder!',
                             style: GoogleFonts.poppins(
-                              fontSize: 70,
+                              fontSize: 50,
                               color: Colors.white,
                             ),
                             textAlign: TextAlign.center, // Align text to the left
