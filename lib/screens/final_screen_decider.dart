@@ -34,12 +34,14 @@ class ResultsScreen extends StatelessWidget {
           );
         } else {
           // Display recommended major using a common widget
-          return background(
-            Center(
-                child: isDesktop
-                    ? desktopResultsScreen(context, state, recommendedMajor, isDesktop)
-                    : mobileResultsScreen(context, state, recommendedMajor, isDesktop),),
-                    "assets/images/background.jpg",
+          return Material(
+            child: background(
+              
+                 isDesktop
+                      ? desktopResultsScreen(context, state, recommendedMajor, isDesktop)
+                      : mobileResultsScreen(context, state, recommendedMajor, isDesktop),
+                      "assets/images/background.jpg",
+            ),
           );
         }
       },
