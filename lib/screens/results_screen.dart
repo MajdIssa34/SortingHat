@@ -142,9 +142,9 @@ Widget desktopResultsScreen(
       children: [
         // First column: all text
         Expanded(
-          child: Padding(
-            padding: const EdgeInsets.all(120),
-            child: SingleChildScrollView(
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(120),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -177,77 +177,75 @@ Widget desktopResultsScreen(
         // Second column: all buttons
         Padding(
           padding: const EdgeInsets.all(100),
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                ElevatedButton(
-                  onPressed: () async {
-                    if (await canLaunchUrlString(state.getMajorLink())) {
-                      await launchUrlString(state.getMajorLink());
-                    }
-                  },
-                  style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(250, 70),
-                    backgroundColor: Colors.blueGrey,
-                    padding: const EdgeInsets.all(15),
-                  ),
-                  child: Text(
-                    "Learn More About this Major",
-                    style: GoogleFonts.poppins(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.white,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                onPressed: () async {
+                  if (await canLaunchUrlString(state.getMajorLink())) {
+                    await launchUrlString(state.getMajorLink());
+                  }
+                },
+                style: ElevatedButton.styleFrom(
+                  fixedSize: const Size(250, 70),
+                  backgroundColor: Colors.blueGrey,
+                  padding: const EdgeInsets.all(15),
                 ),
-                const SizedBox(height: 50),
-                ElevatedButton(
-                  onPressed: () async {
-                    if (await canLaunchUrlString(mqHandbookUrl)) {
-                      await launchUrlString(mqHandbookUrl);
-                    }
-                  },
-                  style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(250, 70),
-                    backgroundColor: Colors.blueGrey,
-                    padding: const EdgeInsets.all(15),
+                child: Text(
+                  "Learn More About this Major",
+                  style: GoogleFonts.poppins(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white,
                   ),
-                  child: Text(
-                    "Open MQ Handbook",
-                    style: GoogleFonts.poppins(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.white,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
+                  textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: 50),
-                ElevatedButton(
-                  onPressed: () {
-                    state.resetQuiz();
-                    Navigator.of(context).popUntil((route) => route.isFirst);
-                  },
-                  style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(250, 70),
-                    backgroundColor: Colors.blueGrey,
-                    padding: const EdgeInsets.all(15),
-                  ),
-                  child: Text(
-                    "Restart Quiz",
-                    style: GoogleFonts.poppins(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.white,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
+              ),
+              const SizedBox(height: 50),
+              ElevatedButton(
+                onPressed: () async {
+                  if (await canLaunchUrlString(mqHandbookUrl)) {
+                    await launchUrlString(mqHandbookUrl);
+                  }
+                },
+                style: ElevatedButton.styleFrom(
+                  fixedSize: const Size(250, 70),
+                  backgroundColor: Colors.blueGrey,
+                  padding: const EdgeInsets.all(15),
                 ),
-              ],
-            ),
+                child: Text(
+                  "Open MQ Handbook",
+                  style: GoogleFonts.poppins(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              const SizedBox(height: 50),
+              ElevatedButton(
+                onPressed: () {
+                  state.resetQuiz();
+                  Navigator.of(context).popUntil((route) => route.isFirst);
+                },
+                style: ElevatedButton.styleFrom(
+                  fixedSize: const Size(250, 70),
+                  backgroundColor: Colors.blueGrey,
+                  padding: const EdgeInsets.all(15),
+                ),
+                child: Text(
+                  "Restart Quiz",
+                  style: GoogleFonts.poppins(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ],
           ),
         ),
       ],
