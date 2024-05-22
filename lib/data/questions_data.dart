@@ -26,23 +26,23 @@ final List<QuizQuestion> questionnaireQuestions = [
   const QuizQuestion(
       "Which of these high school subjects/topics do you excel at or enjoy the most?",
       [
+        'Science, especially physics or computer science.',
         'Business Studies.',
         'Computer Science, specifically in security.',
         'Math, especially advanced topics.',
         'Art, particularly digital or multimedia art.',
         'Programming or software design/tech.',
         'Art or design technology, focusing on web layouts.',
-        'Science, especially physics or computer science.',
         'Technology classes, especially those involving hardware.',
       ],
       [
+        'AI',
         'ISBA',
         'CYB',
         'DS',
         'GDD',
         'ST',
         'WMAD',
-        'AI',
         'NET',
       ]),
   const QuizQuestion("Which of these technologies excites you the most?", [
@@ -123,8 +123,8 @@ final List<QuizQuestion> questionnaireQuestions = [
     'GDD',
   ]),
   const QuizQuestion("The tech job you dream of involves:", [
-    'Developing AI for robotics.',
     'Leading a cybersecurity task force.',
+    'Developing AI for robotics.',
     'Managing big data projects for a tech giant.',
     'Consulting on tech strategies for big companies.',
     'Network administrator for a big company.',
@@ -132,8 +132,8 @@ final List<QuizQuestion> questionnaireQuestions = [
     'Directing a web development agency.',
     'Designing a hit new video game.',
   ], [
-    'AI',
     'CYB',
+    'AI',
     'DS',
     'ISBA',
     'NET',
@@ -143,8 +143,8 @@ final List<QuizQuestion> questionnaireQuestions = [
   ]),
   const QuizQuestion(
       "What role would you like to take on group projects in University?", [
-    'The strategist.',
     'The security.',
+    'The strategist.',
     'The analyst.',
     'The creative mind.',
     'The coder.',
@@ -152,8 +152,8 @@ final List<QuizQuestion> questionnaireQuestions = [
     'The innovator.',
     'The connector.',
   ], [
-    'ISBA',
     'CYB',
+    'ISBA',
     'DS',
     'GDD',
     'ST',
@@ -162,8 +162,8 @@ final List<QuizQuestion> questionnaireQuestions = [
     'NET',
   ]),
   const QuizQuestion("What's your favorite type of game to play?", [
-    'Strategy games that involve business scenarios.',
     'Puzzle games that require logical thinking and problem-solving.',
+    'Strategy games that involve business scenarios.',
     'Games involving complex statistics and scenario planning.',
     'Role-playing games with rich storylines and worlds.',
     'Games that involve building things.',
@@ -171,8 +171,8 @@ final List<QuizQuestion> questionnaireQuestions = [
     'Games based on futuristic themes and technologies.',
     'Multiplayer games that emphasise teamwork and networking skills.',
   ], [
-    'ISBA',
     'CYB',
+    'ISBA',
     'DS',
     'GDD',
     'ST',
@@ -181,8 +181,8 @@ final List<QuizQuestion> questionnaireQuestions = [
     'NET',
   ]),
   const QuizQuestion("If you could improve one technology, it would be:", [
-    'Personal AI assistants.',
     'Anti-virus and anti-malware software.',
+    'Personal AI assistants.',
     'Data analytics tools.',
     'Point of sale systems - like your cashier at work.',
     'Internet speed and reliability.',
@@ -190,8 +190,8 @@ final List<QuizQuestion> questionnaireQuestions = [
     'Web design tools.',
     'Game engine capabilities.',
   ], [
-    'AI',
     'CYB',
+    'AI',
     'DS',
     'ISBA',
     'NET',
@@ -200,8 +200,8 @@ final List<QuizQuestion> questionnaireQuestions = [
     'GDD',
   ]),
   const QuizQuestion("When you think about your future, you imagine:", [
-    'Enhancing machine-human interactions.',
     'Securing the digital world.',
+    'Enhancing machine-human interactions.',
     'Turning data into actionable insights.',
     'Integrating cutting-edge technology into businesses.',
     'Connecting people no matter where they are.',
@@ -209,8 +209,8 @@ final List<QuizQuestion> questionnaireQuestions = [
     'Crafting engaging digital experiences.',
     'Creating the next generation of interactive entertainment.',
   ], [
-    'AI',
     'CYB',
+    'AI',
     'DS',
     'ISBA',
     'NET',
