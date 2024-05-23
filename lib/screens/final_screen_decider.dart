@@ -20,7 +20,7 @@ class ResultsScreen extends StatelessWidget {
 
           return Scaffold(
             appBar: myAppBar,
-            drawer: buildMyDrawer(context, 2),
+            drawer: buildMyDrawer(context, 2, state),
             body: background(
               Center(
                 child: isDesktop

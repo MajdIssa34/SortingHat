@@ -16,7 +16,7 @@ class MobileLayout extends StatelessWidget {
           appBar: myAppBar,
           backgroundColor:
               Colors.transparent, // Set background color to transparent
-          drawer: buildMyDrawer(context, 0),
+          drawer: buildMyDrawer(context, 0, StateModel()),
           body: Container(
             decoration: const BoxDecoration(
               image: DecorationImage(

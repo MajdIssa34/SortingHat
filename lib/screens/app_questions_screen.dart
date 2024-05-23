@@ -15,7 +15,7 @@ class QuestionsScreen extends StatelessWidget {
       builder: (context, state, child) {
         return Scaffold(
           appBar: myAppBar,
-          drawer: buildMyDrawer(context, 1),
+          drawer: buildMyDrawer(context, 1, state),
           body: background(
             Center(
               child: isDesktop

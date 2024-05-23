@@ -1,9 +1,7 @@
 import 'dart:collection';
-
 import 'package:five_guys_plus_one/data/questions_data.dart';
 import 'package:five_guys_plus_one/models/question_model.dart';
 import 'package:flutter/foundation.dart';
-
 class StateModel extends ChangeNotifier {
   int? _selectedAnswerIndex;
   int? get selectedAnswerIndex => _selectedAnswerIndex;
@@ -22,7 +20,7 @@ class StateModel extends ChangeNotifier {
       _keys[currentQuestion] = questionnaireQuestions[currentQuestion]
           .keys[_selectedAnswerIndex ?? 0];
       _selectedAnswerIndex = null;
-
+      print(_keys);
       notifyListeners();
       advanceQuestion();
     }
@@ -75,6 +73,18 @@ class StateModel extends ChangeNotifier {
   void resetQuiz() {
     currentQuestion = 0;
     _status = 'start';
+    _selectedAnswerIndex = null;
+    _answers =
+        List<String>.filled(questionnaireQuestions.length, "", growable: true);
+    _keys =
+        List<String>.filled(questionnaireQuestions.length, "", growable: true);
+    notifyListeners();
+  }
+
+  //method to reset the quiz questions only.
+  void resetQuizQuestion() {
+    currentQuestion = 0;
+    _status = 'in-progress';
     _selectedAnswerIndex = null;
     _answers =
         List<String>.filled(questionnaireQuestions.length, "", growable: true);
@@ -150,7 +160,7 @@ class StateModel extends ChangeNotifier {
       if (finalQuestion.answersList[i] == answer) {
         keyIndex = i;
       }
-    }
+    } 
     return finalQuestion.keys[keyIndex];
   }
 
